@@ -6,19 +6,19 @@
 <title>全球要闻日报 · 索引</title>
 <style>
 :root {
-  --bg: #ffffff;
-  --card-bg: #f8f9ff;
-  --card-bg-alt: #f0f2ff;
-  --text: #2d2a4a;
-  --text-secondary: #6a6788;
-  --accent-red: #ff6b6b;
-  --accent-yellow: #ffd166;
-  --accent-green: #06d6a0;
-  --border: #d8dcf0;
-  --gradient-primary: linear-gradient(135deg, #9d7bff, #5a8cff);
-  --gradient-secondary: linear-gradient(135deg, #ff8a9e, #ff6b6b);
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+  --bg: #0f1117;
+  --card-bg: #1a1d27;
+  --card-bg-alt: #1e2130;
+  --text: #e4e6ed;
+  --text-secondary: #9ca0b0;
+  --accent-red: #e55c5c;
+  --accent-yellow: #e0a944;
+  --accent-green: #5cba7b;
+  --border: #2a2d3a;
+  --gradient-primary: linear-gradient(135deg, #a78bfa, #60a5fa);
+  --gradient-secondary: linear-gradient(135deg, #f472b6, #ec4899);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -76,12 +76,12 @@ body {
 .header .date-badge {
   display:inline-block;
   margin-top:12px;
-  background:rgba(157,123,255,0.1);
-  border:1px solid rgba(157,123,255,0.25);
+  background:rgba(167,139,250,0.1);
+  border:1px solid rgba(167,139,250,0.25);
   border-radius:var(--radius-full);
   padding:5px 18px;
   font-size:13px;
-  color:#9d7bff;
+  color:#a78bfa;
   font-weight:500;
 }
 /* Stats - compact inline */
@@ -131,7 +131,7 @@ body {
   font-size:15px;
   font-weight:600;
   margin-bottom:10px;
-  color:#7b68ee;
+  color:#a78bfa;
 }
 .filter-options {
   display:flex;
@@ -333,7 +333,7 @@ const reports = [
 
 // 更新统计数据
 document.getElementById('total-reports').textContent = reports.length;
-document.getElementById('latest-date').textContent = reports[0].date.split('年')[0].replace('年', '-').replace('月', '-').replace('日', '');
+document.getElementById('latest-date').textContent = reports[0].date.replace('年', '-').replace('月', '-').replace('日', '');
 
 // 生成报告列表
 function renderReports(filter = 'all') {
