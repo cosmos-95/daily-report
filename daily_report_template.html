@@ -320,7 +320,10 @@ body {
 /* Responsive */
 @media (max-width:640px) {
   body { padding:24px 16px; }
-  .stats-row { flex-direction:row; }
+  .stats-row { flex-direction:row; flex-wrap:nowrap; gap:8px; }
+  .stat-card { padding:12px 10px; }
+  .stat-card .num { font-size:24px; }
+  .stat-card .label { font-size:11px; }
   .card { padding:20px; }
   .card-header { flex-direction:column; gap:12px; }
   .tags { justify-content:flex-start; }
@@ -329,8 +332,11 @@ body {
 }
 @media (max-width:480px) {
   body { padding:20px 12px; }
+  .stats-row { flex-direction:row; flex-wrap:nowrap; gap:6px; }
+  .stat-card { padding:10px 8px; }
+  .stat-card .num { font-size:22px; }
+  .stat-card .label { font-size:10px; }
   .header h1 { font-size:24px; }
-  .stat-card .num { font-size:28px; }
 }
 </style>
 </head>
