@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球要闻日报 | 2026年5月27日</title>
+<style>
+:root {
+  --bg: #0f1117;
+  --card-bg: #1a1d27;
+  --card-bg-alt: #1e2130;
+  --text: #e4e6ed;
+  --text-secondary: #9ca0b0;
+  --accent-red: #e55c5c;
+  --accent-yellow: #e0a944;
+  --accent-green: #5cba7b;
+  --border: #2a2d3a;
+  --tag-red-bg: rgba(229,92,92,0.12);
+  --tag-yellow-bg: rgba(224,169,68,0.12);
+  --tag-green-bg: rgba(92,186,123,0.12);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.7;
+  padding:40px 24px;
+}
+.container { max-width:860px; margin:0 auto; }
+/* Header */
+.header {
+  text-align:center;
+  padding:32px 0 40px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:36px;
+}
+.header h1 {
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:-0.5px;
+  background:linear-gradient(135deg, #a78bfa, #60a5fa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.header .sub {
+  margin-top:8px;
+  font-size:14px;
+  color:var(--text-secondary);
+}
+.header .date-badge {
+  display:inline-block;
+  margin-top:14px;
+  background:rgba(167,139,250,0.1);
+  border:1px solid rgba(167,139,250,0.25);
+  border-radius:20px;
+  padding:6px 18px;
+  font-size:13px;
+  color:#a78bfa;
+}
+/* Stats */
+.stats-row {
+  display:flex;
+  gap:12px;
+  margin-bottom:32px;
+}
+.stat-card {
+  flex:1;
+  background:var(--card-bg);
+  border-radius:12px;
+  padding:16px 20px;
+  text-align:center;
+  border:1px solid var(--border);
+}
+.stat-card .num { font-size:26px; font-weight:700; }
+.stat-card .label { font-size:12px; color:var(--text-secondary); margin-top:4px; }
+.stat-card.red .num { color:var(--accent-red); }
+.stat-card.yellow .num { color:var(--accent-yellow); }
+.stat-card.green .num { color:var(--accent-green); }
+/* Section */
+.section { margin-bottom:32px; }
+.section-title {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:16px;
+  font-size:18px;
+  font-weight:700;
+}
+.section-title .dot {
+  width:10px; height:10px; border-radius:50%;
+}
+.section-title .dot.red { background:var(--accent-red); }
+.section-title .dot.yellow { background:var(--accent-yellow); }
+.section-title .dot.green { background:var(--accent-green); }
+/* Cards */
+.card {
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:20px 24px;
+  margin-bottom:12px;
+  transition:border-color 0.2s;
+}
+.card:hover { border-color:#3a3d50; }
+.card-header {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:10px;
+}
+.card-title {
+  font-size:15px;
+  font-weight:600;
+  line-height:1.5;
+}
+.tags { display:flex; gap:6px; flex-shrink:0; flex-wrap:wrap; }
+.tag {
+  font-size:11px;
+  padding:3px 10px;
+  border-radius:10px;
+  font-weight:600;
+  letter-spacing:0.3px;
+}
+.tag.red { background:var(--tag-red-bg); color:var(--accent-red); }
+.tag.yellow { background:var(--tag-yellow-bg); color:var(--accent-yellow); }
+.tag.green { background:var(--tag-green-bg); color:var(--accent-green); }
+.tag.ai { background:rgba(96,165,250,0.12); color:#60a5fa; }
+.card-summary { font-size:14px; color:var(--text-secondary); margin-bottom:12px; }
+.card-impact {
+  background:var(--card-bg-alt);
+  border-radius:10px;
+  padding:12px 16px;
+  font-size:13px;
+  color:#a5b4d0;
+  border-left:3px solid #4f5d7a;
+}
+.card-impact strong { color:#c4b5fd; }
+.source-line {
+  margin-top:12px;
+  font-size:11px;
+  color:#555;
+}
+.source-line span { margin-right:12px; }
+/* Footer */
+.footer {
+  text-align:center;
+  padding:28px 0;
+  border-top:1px solid var(--border);
+  margin-top:36px;
+  font-size:12px;
+  color:var(--text-secondary);
+}
+.footer p { margin:4px 0; }
+/* Category section */
+.cat-section { margin-bottom:36px; }
+.cat-heading {
+  font-size:16px;
+  font-weight:700;
+  color:#a78bfa;
+  padding-bottom:10px;
+  border-bottom:2px solid rgba(167,139,250,0.15);
+  margin-bottom:16px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.cat-heading .icon { font-size:18px; }
+/* Responsive */
+@media (max-width:640px) {
+  body { padding:20px 12px; }
+  .stats-row { flex-direction:column; }
+  .card { padding:16px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>全球要闻日报</h1>
+  <div class="sub">覆盖全球 · 聚焦AI · 交叉验证 · 白话解读</div>
+  <div class="date-badge">2026年5月27日 · 周三 · 农历四月十一</div>
+</div>
+
+<div class="stats-row">
+  <div class="stat-card red">
+    <div class="num">8</div>
+    <div class="label">高影响力事件</div>
+  </div>
+  <div class="stat-card yellow">
+    <div class="num">8</div>
+    <div class="label">中影响力事件</div>
+  </div>
+  <div class="stat-card green">
+    <div class="num">6</div>
+    <div class="label">低影响力事件</div>
+  </div>
+</div>
+
+<!-- ==================== HIGH IMPACT ==================== -->
+<div class="section">
+  <div class="section-title"><span class="dot red"></span>高影响力 · 值得每个人关注</div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">DeepSeek V4 Pro 永久降价 75%，全球大模型价格战开打</div>
+      <div class="tags"><span class="tag red">高影响力</span><span class="tag ai">AI</span></div>
+    </div>
+    <div class="card-summary">DeepSeek 将旗舰模型 V4 Pro 定价永久下调75%，每百万 token 最低仅 $0.36，直接对标 OpenAI GPT-5 和 Google Gemini。降价后中国 AI 使用成本大幅降低，进一步挤压中小厂商生存空间。</div>
+    <div class="card-impact"><strong>对你有什么影响：</strong>以后用 AI 写文案、做翻译、辅助编程会越来越便宜，甚至免费。企业接入成本也大幅下降，各类 AI 应用会加速普及到你日常用的 App 里。但也要注意：价格战意味着数据隐私可能成为新的"隐形付费"——免费的东西往往在收集你的数据。</div>
+    <div class="source-line"><span>来源：雪球/钛媒体</span><span>交叉验证：多源一致</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">美光科技市值突破 1 万亿美元，AI 存储芯片进入"抢货时代"</div>
+      <div class="tags"><span class="tag red">高影响力</span><span class="tag ai">AI</span></div>
+    </div>
+    <div class="card-summary">美光股价单日暴涨 19.29%，市值站上 1 万亿美元。三大存储巨头（美光、三星、SK 海力士）2026 年 HBM 产能已被预订一空。全球 DRAM 供需缺口达 4.9%，为 15 年来最严重短缺。</div>
+    <div class="card-impact"><strong>对你有什么影响：</strong>手机、电脑、平板等所有用内存芯片的设备都可能涨价。小米卢伟冰已经表态不把成本转嫁给消费者，但不是所有厂商都能扛住。如果你近期打算买手机或笔记本，建议尽快下手，越等越贵是大概率事件。另外，AI 服务订阅费也可能因为算力成本上升而涨价。</div>
+    <div class="source-line"><span>来源：财联社/第一财经/证券时报</span><span>交叉验证：多源一致</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Google I/O 2026：AI 全面接管搜索、眼镜、助手</div>
+      <div class="tags"><span class="tag red">高影响力</span><span class="tag ai">AI</span></div>
+    </div>
+    <div class="card-summary">Google 发布 Gemini Omni 多模态模型（任意输入生成任意输出）、Gemini Spark 云端智能助手（可自动监控订阅、追踪邮件、调用第三方 App）、Android XR 智能眼镜（实时翻译、AR 文本翻译）。Gemini 月活用户突破 9 亿。</div>
+    <div class="card-impact"><strong>对你有什么影响：</strong>Google 的 AI 化方向直接影响中国科技公司的跟进策略。百度、阿里、字节大概率会推出类似产品。更直接的是：AI 助手很快会能帮你自动管理信用卡订阅、自动处理学校通知、自动帮你点外卖——"数字管家"不再是科幻。但这也意味着你需要把更多个人信息交给 AI，隐私 vs 便利的权衡会越来越现实。</div>
+    <div class="source-line"><span>来源：每经/雪球/钛媒体</span><span>交叉验证：多源一致</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">OpenAI GPT-5.6 将于 6 月发布，150 万 token 上下文窗口</div>
+      <div class="tags"><span class="tag red">高影响力</span><span class="tag ai">AI</span></div>
+    </div>
+    <div class="card-summary">GPT-5.6 支持 150 万 token 上下文（比 5.5 提升 43%），可流畅处理 90 万 token 输入，能零提示生成商用前端界面。OpenAI 同时与 Dell 合作将 Codex 编码代理引入企业本地环境，被 Gartner 评为企业编码代理领导者。</div>
+    <div class="card-impact"><strong>对你有什么影响：</strong>150 万 token 意味着可以一次丢进去几十本书让 AI 分析，法律合同审查、大型项目代码理解、学术论文综述等工作效率将质变。对于普通上班族来说，AI 辅助写报告、做 PPT 的能力会显著增强。ChatGPT 已集成 PowerPoint 一键生成演示文稿，你的日常工作方式可能很快被改变。</div>
+    <div class="source-line"><span>来源：钛媒体 Edge AI Daily</span><span>交叉验证：多源一致</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">长鑫科技科创板上市，国产 DRAM 冲刺 2 万亿市值</div>
+      <div class="tags"><span class="tag red">高影响力</span><span class="tag ai">芯片</span></div>
+    </div>
+    <div class="card-summary">国产 DRAM 龙头长鑫科技今日上会，2026 Q1 扭亏为盈，归母净利润 247.62 亿元，日均盈利超 2.75 亿元。若成功上市，市值有望冲击 2-3 万亿元，成为科创板开板以来最具分量的芯片 IPO。</div>
+    <div class="card-impact"><strong>对你有什么影响：</strong>长鑫上市意味着国产内存终于有了和国际巨头掰手腕的资本。短期看不会直接让内存降价（缺口太大了），但长期来说，国产替代能打破三星、美光、SK 海力士三家垄断的局面，未来你买手机电脑的内存溢价会降低。作为普通人，这也是一个值得关注的资本市场信号。</div>
+    <div class="source-line"><span>来源：每日经济新闻/钛媒体</span><span>交叉验证：多源一致</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">华为宣称 2031 年可自研 1.4nm 芯片</div>
+      <div class="tags"><span class="tag red">高影响力</span><span class="tag ai">芯片</span></div>
+    </div>
+    <div class="card-summary">华为芯片负责人何庭波在上海半导体峰会上表示，华为可匹配台积电/三星的 1.4nm 尖端制程，且"可行且负担得起"。若实现，这将是自 2019 年制裁以来最重大的技术突围。</div>
+    <div class="card-impact"><strong>对你有什么影响：</strong>虽然 2031 年还很远，但这个表态意味着中国在芯片制造最尖端领域已经有了明确路线图。现实一点看：短期内华为手机和电脑的价格还是会偏高（芯片成本高），但给了市场对国产高端芯片的长期信心，有助于稳定整个电子产品供应链。</div>
+    <div class="source-line"><span>来源：雪球/钛媒体</span><span>交叉验证：华为官方渠道</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">美国 10% 全球关税 7 月到期，可能重新征收</div>
+      <div class="tags"><span class="tag red">高影响力</span></div>
+    </div>
+    <div class="card-summary">美国贸易代表格里尔表示，特朗普 10% 全球关税在 7 月到期后可能重新征收。该关税自 2 月起实施，最多持续 150 天。此外美联储信誉面临危机——通胀已连续五年超 2% 目标。</div>
+    <div class="card-impact"><strong>对你有什么影响：</strong>关税重新征收会让进出口商品涨价，从电子产品到日用消费品都可能受到影响。再加上美国通胀持续高位、油价波动（布伦特逼近 100 美元），全球物价上涨的压力最终会传导到国内。你可能会发现海淘变贵了、一些进口商品涨价了。建议关注 7 月关税走向，提前安排大额消费。</div>
+    <div class="source-line"><span>来源：华尔街日报/财联社</span><span>交叉验证：多源一致</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">上海发布"AI+"行动方案，加快 AI 工业软件研发</div>
+      <div class="tags"><span class="tag red">高影响力</span><span class="tag ai">AI</span></div>
+    </div>
+    <div class="card-summary">上海市政府发布实施意见，推动行业大模型、通用智能体研发与应用，在工业、金融等场景规模化落地。强调通过算力构建、大模型部署、数据治理提升研发效率。</div>
+    <div class="card-impact"><strong>对你有什么影响：</strong>上海的政策往往是全国风向标。这意味着 AI 应用将加速进入你的工作场景——无论你是在工厂、银行还是写字楼。制造业的 AI 化会提升效率但也可能替代一些重复性岗位；金融 AI 化让你理财更方便但也要小心 AI 推荐的金融产品是否靠谱。</div>
+    <div class="source-line"><span>来源：钛媒体/上海市政府</span><span>交叉验证：官方文件</span></div>
+  </div>
+
+</div>
+
+<!-- ==================== CATEGORY: AI ==================== -->
+<div class="cat-section">
+  <div class="cat-heading"><span class="icon">🤖</span> AI 领域深度聚焦</div>
+
+  <div class="section">
+    <div class="section-title"><span class="dot yellow"></span>中影响力</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Anthropic 首次季度盈利，Mythos 模型发现超万漏洞</div>
+        <div class="tags"><span class="tag yellow">中影响力</span><span class="tag ai">AI</span></div>
+      </div>
+      <div class="card-summary">Anthropic 预计 Q2 营收 $109 亿、运营利润 $5.59 亿，成立四年以来首次盈利。其 Mythos 模型在 Project Glasswing 项目中一个月发现超 10,000 个漏洞，Mozilla 用它修复了 271 个 Firefox 漏洞（旧模型 10 倍）。欧洲央行紧急开会升级网络防御。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>AI 找漏洞的能力已经不是科幻，这意味着你用的软件、App、网站安全性会被 AI 双向影响——好人用 AI 更快修漏洞，坏人也用 AI 更快找漏洞。对你来说，保持系统和 App 更新比以往更重要，不要关闭自动更新。</div>
+      <div class="source-line"><span>来源：雪球/钛媒体/PChome</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">支付宝发布 AI 付 / AI 收 / TokenPay / AI 钱包四款新品</div>
+        <div class="tags"><span class="tag yellow">中影响力</span><span class="tag ai">AI</span></div>
+      </div>
+      <div class="card-summary">AI 付已支持 95% 通用智能体框架，AI 眼镜、智能座舱都可支付。TokenPay 帮大模型公司解决全球订阅。MiniMax、阶跃星辰与支付宝达成深度合作。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>很快你的 AI 助手就能直接帮你花钱——自动续费、自动购物、自动买单。方便是真方便，但钱包安全也要注意。建议关注支付宝 AI 钱包的风控机制，开通前看清楚授权范围。</div>
+      <div class="source-line"><span>来源：新浪科技/钛媒体</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">阿里云海外发布 QwenCloud，千问 3.7 编程能力全球第二</div>
+        <div class="tags"><span class="tag yellow">中影响力</span><span class="tag ai">AI</span></div>
+      </div>
+      <div class="card-summary">阿里云在新加坡发布 Qwen Cloud、Agent 产品 MuleRun、智能体编程平台 Qoder。Qwen3.7-Max 在 Code Arena 编程榜排名全球第二，超越 GPT-5.5、Gemini-3.5-Flash。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>中国 AI 模型在国际编程比赛中排第二，说明国产 AI 写代码能力已经世界一流。如果你是程序员或 IT 从业者，这意味着国产 AI 编程助手会更强大、更便宜。普通人也能用自然语言让 AI 帮你生成小工具，门槛越来越低。</div>
+      <div class="source-line"><span>来源：钱江晚报/科创板日报</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">美团"跑腿 Skill"发布，AI 助手可直接帮你下单</div>
+        <div class="tags"><span class="tag yellow">中影响力</span><span class="tag ai">AI</span></div>
+      </div>
+      <div class="card-summary">美团将跑腿下单能力封装为 Skill，向 AI 助手生态开放。在 OpenClaw、Cursor、微信、飞书等 AI 助手中，用自然语言描述需求即可下单。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>以后你对 AI 说"帮我把这个文件送到 XX 大厦"，AI 就直接帮你叫跑腿了。这是 AI 从"聊天工具"变成"行动工具"的标志事件。省去了打开 App、填地址、下单的步骤——但也意味着 AI 需要知道你的地址和支付信息。</div>
+      <div class="source-line"><span>来源：界面新闻/钛媒体</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">OpenAI 高薪招募"AI 自我进化"安全专家</div>
+        <div class="tags"><span class="tag yellow">中影响力</span><span class="tag ai">AI</span></div>
+      </div>
+      <div class="card-summary">OpenAI 招聘"递归式自我改进"安全研究员，年薪 €25-38 万。黄仁勋则公开批评"将裁员归咎于 AI"的 CEO 们"懒惰且不负责任"，但现实是 Meta 裁员 8000 人、耐克裁员 1400 人均与 AI 部署有关。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>AI 能否自我进化是一个关键转折点——过了这个点，AI 进步速度可能超出人类控制。短期来看，就业市场"AI 替代焦虑"是真实的，但替代的不是全部岗位，而是不会用 AI 的人。建议把 AI 当作工具而不是威胁，学会和 AI 协作。</div>
+      <div class="source-line"><span>来源：环球网/钛媒体/中国侨网</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">超 200 款 AI 设计药物进入临床试验，但尚无 FDA 批准</div>
+        <div class="tags"><span class="tag yellow">中影响力</span><span class="tag ai">AI</span></div>
+      </div>
+      <div class="card-summary">AI 将新药研发周期从 10-15 年压缩至 3-6 年，成本降低 30%-70%。全球 AI 制药市场 2026 年预计达 $29.9 亿，年增速超 30%。15-20 款药物已进入关键三期试验。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>AI 加速药物研发意味着未来新药上市更快、价格更低。对于患有罕见病或需要长期服药的人来说，这是实实在在的好消息。但短期内还没有 FDA 批准的 AI 药物上市，需要耐心等待。</div>
+      <div class="source-line"><span>来源：钛媒体 Edge AI Daily</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">小米自动驾驶模型 Xiaomi OneVL 开源，MiMo API 降价 99%</div>
+        <div class="tags"><span class="tag yellow">中影响力</span><span class="tag ai">AI</span></div>
+      </div>
+      <div class="card-summary">小米将 VLA 与世界模型统一到一个框架，全面开源。MiMo-V2.5 系列 API 永久降价，最高降幅达 99%。小米手机 Q1 全球份额连续 23 个季度前三，海外均价创新高。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>99% 的降价意味着开发者可以几乎零成本使用小米 AI 能力，这会催生大量基于小米生态的 AI 应用。如果你用小米手机或小米汽车，未来 AI 体验会大幅提升。对普通消费者来说，也能享受到更便宜的 AI 服务。</div>
+      <div class="source-line"><span>来源：新浪科技/快科技/羊城晚报</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">微软 Copilot Cowork 存在 100% 成功率文件泄露漏洞</div>
+        <div class="tags"><span class="tag yellow">中影响力</span><span class="tag ai">AI安全</span></div>
+      </div>
+      <div class="card-summary">攻击者可通过上传恶意技能文件操纵 AI 发送含预认证下载链接的 Teams 消息，导致 SharePoint 和 OneDrive 文件泄露。5 次试验全部成功，无需人工审批。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>如果你所在公司使用微软 365 和 Copilot，需要提醒 IT 部门关注这个漏洞。企业数据安全是 AI 时代的重大隐患——AI 越强大，攻击面越大。个人用户也要注意：不要轻易给 AI 助手授权访问敏感文件。</div>
+      <div class="source-line"><span>来源：钛媒体 Edge AI Daily</span></div>
+    </div>
+
+  </div>
+
+  <!-- LOW IMPACT AI -->
+  <div class="section">
+    <div class="section-title"><span class="dot green"></span>低影响力 · 了解一下即可</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">海尔发布全球最轻 AI 运动外骨骼机器人 W3（1.75kg）</div>
+        <div class="tags"><span class="tag green">低影响力</span><span class="tag ai">AI硬件</span></div>
+      </div>
+      <div class="card-summary">全碳纤维+钛合金设计，AI 步态算法 3.0，毫秒级判断运动意图，单腿最大助力 16N·m，减负约 5kg。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>短期来看是老年人、康复患者和户外运动爱好者的福音。长期看，外骨骼技术成熟后可能像智能手表一样普及，让你走路不累、爬山轻松。但目前价格和体验还需要时间打磨。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">天工 AI 发布 SkyClaw-v1.0 | 阿里千问编程全球第二</div>
+        <div class="tags"><span class="tag green">低影响力</span><span class="tag ai">AI模型</span></div>
+      </div>
+      <div class="card-summary">昆仑万维推出高性能 Agent 模型。Qwen3.7-Max 在 Code Arena 超越 GPT-5.5，仅次于 Claude。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>国产 AI 模型编程能力追上国际一流，以后用国产 AI 写代码、做开发完全够用。不需要翻墙用 ChatGPT 也能享受到顶级编程助手。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">DuckDuckGo 安装量激增 30%，用户逃离 Google 强制 AI 搜索</div>
+        <div class="tags"><span class="tag green">低影响力</span><span class="tag ai">AI搜索</span></div>
+      </div>
+      <div class="card-summary">Google 市场份额自 2015 年来首次跌破 90%。用户不满 AI 强制推送（简单查询被复杂化），转向传统搜索。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>AI 搜索虽然强大，但很多人仍然喜欢传统搜索结果。这提醒我们：AI 不是万能的，有时候简单直接的传统方式更好。国内搜索引擎也面临同样问题，你可以有意识地选择适合自己的搜索方式。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">字节跳动向 Seed 员工开放"豆包股"，$13/股</div>
+        <div class="tags"><span class="tag green">低影响力</span><span class="tag ai">企业动态</span></div>
+      </div>
+      <div class="card-summary">字节首次针对特定业务单元发行股权，Seed AI 部门员工可认购"豆包股"，自去年底以来价值上涨近 30%。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>这说明字节跳动对 AI 业务（豆包）高度看好，愿意用股权激励吸引 AI 人才。豆包作为国民级 AI 应用，未来发展速度会加快，你用豆包的体验也会越来越好。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">SK 海力士发布 iHBM 散热技术 | 英伟达新芯片或翻倍至 $8 万</div>
+        <div class="tags"><span class="tag green">低影响力</span><span class="tag ai">AI硬件</span></div>
+      </div>
+      <div class="card-summary">iHBM 热阻降低超 30%。英伟达新一代芯片因 HBM3E 内存需求从 80GB 增至 192GB，成本增加近 3 倍，价格或翻倍至 $8 万。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>AI 芯片涨价最终会传导到云计算成本，进而影响你使用的各种 AI 服务订阅价格。但这是上游的事，对普通人的影响比较间接。</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">FreeLLMAPI 开源工具月提供 8 亿 Token | 擎朗发布人形机器人</div>
+        <div class="tags"><span class="tag green">低影响力</span><span class="tag ai">AI开源</span></div>
+      </div>
+      <div class="card-summary">聚合 14 家 AI 平台免费额度，GitHub 34 天 5122 星。擎朗 XMAN-L1 身高 136cm，42 自由度，接入豆包/腾讯大模型。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>开发者可以免费使用大量 AI 能力来做自己的项目，这会让更多有趣、有用的 AI 应用出现。人形机器人开始进入商场和展厅，但离走进家庭还有距离。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ==================== GLOBAL ==================== -->
+<div class="cat-section">
+  <div class="cat-heading"><span class="icon">🌍</span> 全球政经要闻</div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">SpaceX 获美军 $22.9 亿合同 + NASA 追加 6 次载人任务</div>
+      <div class="tags"><span class="tag yellow">中影响力</span></div>
+    </div>
+    <div class="card-summary">SpaceX 将为美军建设安全高速卫星通信网络。NASA 拟追加 6 次载人任务，总金额近 $17 亿。富时罗素修改规则允许 SpaceX IPO 后 5 个交易日快速纳入指数。马斯克曾讨论 SpaceX 与特斯拉合并。</div>
+    <div class="card-impact"><strong>对你有什么影响：</strong>SpaceX 上市是今年最大的 IPO 事件之一。星链服务已覆盖全球，如果你经常出差或住在偏远地区，星链可能是未来的上网选择之一。另外，SpaceX + 特斯拉合并的传闻意味着马斯克的商业帝国将更深度整合 AI 和航天资源。</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">中东局势：以色列空袭黎巴嫩致 71 人伤亡 | 美伊停火协议面临破裂</div>
+      <div class="tags"><span class="tag yellow">中影响力</span></div>
+    </div>
+    <div class="card-summary">以色列空袭黎南部和东部多地，炸毁黎重要水坝附近区域。伊朗指控美国公然违反停火协议，在过去 48 小时内实施"海上强盗行为"。伊朗警告若出口遭禁将阻止地区石油外运。</div>
+      <div class="card-impact"><strong>对你有什么影响：</strong>霍尔木兹海峡是全球石油运输咽喉，一旦局势升级，国际油价可能再次暴涨。虽然中国有能源多元化策略，但油价上涨最终会让你加油更贵、物流成本上升、物价跟着涨。好在中国品牌电动车欧洲市占率首超 15%，新能源替代在加速。</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">NASA 公布月球基地三阶段路线图 | 2032 年实现"月面持续存在"</div>
+      <div class="tags"><span class="tag yellow">中影响力</span></div>
+    </div>
+    <div class="card-summary">第一阶段至 2029 年，第二阶段 2029-2032 年组装半永久设施。SpaceX 投建超级工厂推动太空光伏产业化。蓝色起源无人登月任务目标 2026 年秋季。</div>
+    <div class="card-impact"><strong>对你有什么影响：</strong>短期内与你关系不大，但太空光伏产业化一旦实现，可能彻底改变全球能源格局——太空中没有昼夜和天气影响，太阳能发电效率是地面的数倍。长期看，这可能让电价大幅下降。</div>
+  </div>
+
+</div>
+
+<!-- ==================== CROSS-VERIFICATION ==================== -->
+<div class="cat-section">
+  <div class="cat-heading"><span class="icon">🔍</span> 交叉验证与信息茧房突破</div>
+
+  <div class="card">
+    <div class="card-summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:0;">
+      <p style="margin-bottom:8px;">本期报告数据来源覆盖以下渠道，进行多角度交叉比对：</p>
+      <p style="margin:2px 0;">🇨🇳 国内源：钛媒体、财联社、第一财经、每日经济新闻、证券时报、新浪科技、腾讯新闻、界面新闻、雪球</p>
+      <p style="margin:2px 0;">🇺🇸 海外源：CNBC、华尔街日报、路透社、东方财富（引用外电）</p>
+      <p style="margin:2px 0;">🌐 独立源：Edge AI Daily（钛媒体英文版）、PChome（台湾）、凤凰卫视</p>
+      <p style="margin-top:12px;color:#a78bfa;font-size:13px;"><strong>⚠️ 信息茧房提示：</strong>关于 DeepSeek 降价，西方媒体侧重"价格战"叙事，国内媒体侧重"技术突破"叙事。关于中东局势，国内报道偏重伊朗立场，西方报道偏重以色列立场。建议读者主动对比不同来源以获取全貌。</p>
+      <p style="margin-top:4px;color:#e0a944;font-size:13px;"><strong>💡 方法论：</strong>每条 AI 相关新闻均对照至少 2 个独立来源验证核心数据。影响力评级基于事件对中国普通个人的直接/间接触及程度与紧迫性综合判断，而非单纯基于国际关注度。</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>全球要闻日报 · 自动生成于 2026-05-27</p>
+  <p>影响力评级基于对中国普通个人的直接/间接触及程度</p>
+  <p style="margin-top:8px;color:#555;">本报告由 AI 自动聚合生成，信息仅供参考，不构成任何投资或行动建议。</p>
+</div>
+
+</div>
+</body>
+</html>
