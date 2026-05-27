@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球要闻日报 · 索引</title>
+<style>
+:root {
+  --bg: #0f1117;
+  --card-bg: #1a1d27;
+  --card-bg-alt: #1e2130;
+  --text: #e4e6ed;
+  --text-secondary: #9ca0b0;
+  --accent-red: #e55c5c;
+  --accent-yellow: #e0a944;
+  --accent-green: #5cba7b;
+  --border: #2a2d3a;
+  --gradient-primary: linear-gradient(135deg, #a78bfa, #60a5fa);
+  --gradient-secondary: linear-gradient(135deg, #f472b6, #ec4899);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.7;
+  padding:40px 24px;
+  min-height:100vh;
+}
+.container { 
+  max-width:860px; 
+  margin:0 auto; 
+}
+/* Header */
+.header {
+  text-align:center;
+  padding:32px 0 40px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:36px;
+  position:relative;
+}
+.header::after {
+  content:'';
+  position:absolute;
+  bottom:-1px;
+  left:50%;
+  transform:translateX(-50%);
+  width:120px;
+  height:3px;
+  background:var(--gradient-primary);
+  border-radius:var(--radius-full);
+}
+.header h1 {
+  font-size:32px;
+  font-weight:800;
+  letter-spacing:-0.5px;
+  background:var(--gradient-primary);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:8px;
+}
+.header .sub {
+  margin-top:8px;
+  font-size:15px;
+  color:var(--text-secondary);
+  font-weight:400;
+}
+.header .date-badge {
+  display:inline-block;
+  margin-top:18px;
+  background:rgba(167,139,250,0.1);
+  border:1px solid rgba(167,139,250,0.25);
+  border-radius:var(--radius-full);
+  padding:8px 22px;
+  font-size:14px;
+  color:#a78bfa;
+  font-weight:500;
+  backdrop-filter:blur(8px);
+}
+/* Stats */
+.stats-row {
+  display:flex;
+  gap:16px;
+  margin-bottom:36px;
+}
+.stat-card {
+  flex:1;
+  background:var(--card-bg);
+  border-radius:var(--radius-lg);
+  padding:20px 24px;
+  text-align:center;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+}
+.stat-card .num { 
+  font-size:32px; 
+  font-weight:800; 
+  margin-bottom:4px;
+}
+.stat-card .label { 
+  font-size:13px; 
+  color:var(--text-secondary); 
+  font-weight:500;
+  letter-spacing:0.5px;
+}
+.stat-card.red .num { 
+  background:var(--gradient-secondary);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.stat-card.blue .num { 
+  background:var(--gradient-primary);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+/* Filter */
+.filter-section {
+  margin-bottom:32px;
+}
+.filter-title {
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:16px;
+  color:#a78bfa;
+}
+.filter-options {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.filter-btn {
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius-full);
+  padding:8px 20px;
+  font-size:14px;
+  color:var(--text-secondary);
+  cursor:pointer;
+  transition:all 0.2s;
+  font-weight:500;
+}
+.filter-btn:hover {
+  border-color:#a78bfa;
+  color:#a78bfa;
+}
+.filter-btn.active {
+  background:rgba(167,139,250,0.1);
+  border-color:#a78bfa;
+  color:#a78bfa;
+}
+/* Reports List */
+.reports-section {
+  margin-bottom:40px;
+}
+.reports-title {
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:20px;
+  padding-bottom:12px;
+  border-bottom:2px solid var(--border);
+}
+.report-list {
+  display:grid;
+  gap:16px;
+}
+.report-card {
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  padding:20px 24px;
+  transition:border-color 0.2s, box-shadow 0.2s;
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+.report-card:hover {
+  border-color:#3a3d50;
+  box-shadow:var(--shadow-md);
+}
+.report-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
+.report-date {
+  font-size:18px;
+  font-weight:700;
+  color:#a78bfa;
+}
+.report-tag {
+  font-size:12px;
+  padding:4px 12px;
+  border-radius:var(--radius-full);
+  font-weight:600;
+  background:rgba(96,165,250,0.12);
+  color:#60a5fa;
+}
+.report-summary {
+  font-size:14px;
+  color:var(--text-secondary);
+  line-height:1.6;
+  margin-bottom:12px;
+}
+.report-meta {
+  display:flex;
+  gap:16px;
+  font-size:12px;
+  color:#777;
+}
+.report-meta span {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+/* Footer */
+.footer {
+  text-align:center;
+  padding:32px 0;
+  border-top:1px solid var(--border);
+  margin-top:40px;
+  font-size:13px;
+  color:var(--text-secondary);
+}
+.footer p { 
+  margin:6px 0; 
+  line-height:1.5;
+}
+.footer .disclaimer {
+  margin-top:16px;
+  padding:12px 20px;
+  background:rgba(0,0,0,0.1);
+  border-radius:var(--radius-md);
+  font-size:12px;
+  color:#777;
+}
+/* Responsive */
+@media (max-width:640px) {
+  body { padding:24px 16px; }
+  .stats-row { flex-direction:column; }
+  .report-card { padding:16px; }
+  .header h1 { font-size:28px; }
+}
+@media (max-width:480px) {
+  body { padding:20px 12px; }
+  .header h1 { font-size:24px; }
+  .stat-card .num { font-size:28px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>全球要闻日报</h1>
+  <div class="sub">每日精选 · 聚焦AI · 白话解读</div>
+  <div class="date-badge">索引页 · 按日期查看历史报告</div>
+</div>
+
+<div class="stats-row">
+  <div class="stat-card red">
+    <div class="num" id="total-reports">1</div>
+    <div class="label">历史报告总数</div>
+  </div>
+  <div class="stat-card blue">
+    <div class="num" id="latest-date">2026-05-27</div>
+    <div class="label">最新报告日期</div>
+  </div>
+</div>
+
+<div class="filter-section">
+  <div class="filter-title">筛选</div>
+  <div class="filter-options">
+    <button class="filter-btn active" onclick="filterReports('all')">全部报告</button>
+    <button class="filter-btn" onclick="filterReports('week')">最近一周</button>
+    <button class="filter-btn" onclick="filterReports('month')">最近一月</button>
+    <button class="filter-btn" onclick="filterReports('ai')">AI专题</button>
+  </div>
+</div>
+
+<div class="reports-section">
+  <div class="reports-title">历史报告</div>
+  <div class="report-list" id="report-list">
+    <!-- 报告列表由JavaScript动态生成 -->
+    <div class="report-card">
+      <div class="report-header">
+        <div class="report-date">2026年5月27日 · 周三</div>
+        <div class="report-tag">AI专题</div>
+      </div>
+      <div class="report-summary">DeepSeek V4 Pro 永久降价75%引爆全球大模型价格战；美光科技市值突破1万亿美元；Google I/O 2026发布AI全家桶；华为宣称2031年可自研1.4nm芯片...</div>
+      <div class="report-meta">
+        <span>📊 高影响力事件: 8</span>
+        <span>📈 中影响力事件: 8</span>
+        <span>📉 低影响力事件: 6</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>全球要闻日报 · 自动生成 · 每日更新</p>
+  <p>点击报告卡片即可查看当日完整内容</p>
+  <div class="disclaimer">
+    本索引页自动更新，每天上午9点自动添加新报告。<br>
+    配色方案：深色主题 + 高级灰蓝配色 + 扁平圆角设计
+  </div>
+</div>
+
+<script>
+// 报告数据
+const reports = [
+  {
+    date: "2026年5月27日",
+    weekday: "周三",
+    filename: "daily_report_20260527.html",
+    summary: "DeepSeek V4 Pro 永久降价75%引爆全球大模型价格战；美光科技市值突破1万亿美元；Google I/O 2026发布AI全家桶；华为宣称2031年可自研1.4nm芯片...",
+    highCount: 8,
+    midCount: 8,
+    lowCount: 6,
+    tags: ["ai"]
+  }
+];
+
+// 更新统计数据
+document.getElementById('total-reports').textContent = reports.length;
+document.getElementById('latest-date').textContent = reports[0].date.split('年')[0].replace('年', '-').replace('月', '-').replace('日', '');
+
+// 生成报告列表
+function renderReports(filter = 'all') {
+  const container = document.getElementById('report-list');
+  let filtered = [...reports];
+  
+  // 筛选逻辑
+  if (filter === 'week') {
+    // 最近一周（示例逻辑，实际需要根据日期计算）
+    filtered = reports.slice(0, Math.min(7, reports.length));
+  } else if (filter === 'month') {
+    filtered = reports.slice(0, Math.min(30, reports.length));
+  } else if (filter === 'ai') {
+    filtered = reports.filter(r => r.tags.includes('ai'));
+  }
+  
+  container.innerHTML = filtered.map(report => `
+    <a href="${report.filename}" class="report-card">
+      <div class="report-header">
+        <div class="report-date">${report.date} · ${report.weekday}</div>
+        <div class="report-tag">${report.tags.includes('ai') ? 'AI专题' : '综合'}</div>
+      </div>
+      <div class="report-summary">${report.summary}</div>
+      <div class="report-meta">
+        <span>📊 高影响力事件: ${report.highCount}</span>
+        <span>📈 中影响力事件: ${report.midCount}</span>
+        <span>📉 低影响力事件: ${report.lowCount}</span>
+      </div>
+    </a>
+  `).join('');
+}
+
+// 筛选函数
+function filterReports(type) {
+  // 更新按钮状态
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  // 渲染对应报告
+  renderReports(type);
+}
+
+// 初始渲染
+renderReports('all');
+
+// 自动更新逻辑（每天检查新报告）
+function checkForNewReports() {
+  // 这里可以添加从服务器获取最新报告列表的逻辑
+  console.log('检查新报告...');
+}
+
+// 每6小时检查一次
+setInterval(checkForNewReports, 6 * 60 * 60 * 1000);
+</script>
+</body>
+</html>
