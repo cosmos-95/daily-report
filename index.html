@@ -84,7 +84,7 @@ body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg-top
     <div class="date-badge">索引页 · 按日期查看历史报告</div>
   </div>
   <div class="stats-row">
-    <div class="stat-card red"><div class="num" id="total-reports">3</div><div class="label">历史报告总数</div></div>
+    <div class="stat-card red"><div class="num" id="total-reports">0</div><div class="label">历史报告总数</div></div>
     <div class="stat-card blue"><div class="num" id="latest-date">2026-5-29</div><div class="label">最新报告日期</div></div>
   </div>
   <div class="date-bar" id="date-bar"></div>
@@ -108,8 +108,7 @@ body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg-top
   </div>
 </div>
 <script>
-const reports = {date:"2026年5月29日",weekday:"周五",filename:"daily_report_20260529.html",summary:"伊朗战争霍尔木兹海峡关闭致油价破$120；Google I/O发布Gemini Spark个人AI智能体；普京习近平会晤深化欧亚战略协作；欧盟罚Temu €2亿",highCount:9,midCount:10,lowCount:1,tags:["ai"]},{date:"2026年5月28日",weekday:"周四",filename:"daily_report_20260528.html",summary:"比亚迪发布4nm智驾芯片、SpaceX火星飞行宣布、荷兰侵权舰机驱离、河南13死追尾、城市更新十五五规划",highCount:7,midCount:5,lowCount:2,tags:["ai"],sourceCount:18},{date:"2026年5月27日",weekday:"周三",filename:"daily_report_20260527.html",summary:"荷兰侵闯西沙被驱离、法拉利电动车股价暴跌、极端降雨致重大伤亡、欧盟拟推产能过剩工具",highCount:6,midCount:5,lowCount:0,tags:["ai"],sourceCount:20};
-const WEEKDAYS = ['\u65e5','\u4e00','\u4e8c','\u4e09','\u56db','\u4e94','\u516d'];
+const reports = {date:"2026年5月29日",weekday:"周五",filename:"daily_report_20260529.html",summary:"伊朗战争霍尔木兹海峡关闭致油价破$120；Google I/O发布Gemini Spark个人AI智能体；普京习近平会晤深化欧亚战略协作；欧盟罚Temu €2亿",highCount:9,midCount:10,lowCount:1,tags:[]
 
 document.getElementById('total-reports').textContent = reports.length;
 document.getElementById('latest-date').textContent = reports.length > 0
