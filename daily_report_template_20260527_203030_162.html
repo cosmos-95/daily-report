@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球要闻日报 | {date}</title>
+<meta name="description" content="{summary}">
+<meta name="report-stats" content="high:{high_count},mid:{mid_count},low:{low_count}">
+<style>
+:root {
+  --bg: #0f1117;
+  --card-bg: #1a1d27;
+  --card-bg-alt: #1e2130;
+  --text: #e4e6ed;
+  --text-secondary: #9ca0b0;
+  --accent-red: #e55c5c;
+  --accent-yellow: #e0a944;
+  --accent-green: #5cba7b;
+  --border: #2a2d3a;
+  --tag-red-bg: rgba(229,92,92,0.12);
+  --tag-yellow-bg: rgba(224,169,68,0.12);
+  --tag-green-bg: rgba(92,186,123,0.12);
+  --gradient-primary: linear-gradient(135deg, #a78bfa, #60a5fa);
+  --gradient-secondary: linear-gradient(135deg, #f472b6, #ec4899);
+  --gradient-warning: linear-gradient(135deg, #f59e0b, #d97706);
+  --gradient-success: linear-gradient(135deg, #10b981, #059669);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.7;
+  padding:40px 24px;
+  min-height:100vh;
+}
+.container { max-width:860px; margin:0 auto; }
+.header {
+  text-align:center;
+  padding:32px 0 40px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:36px;
+  position:relative;
+}
+.header::after {
+  content:'';
+  position:absolute;
+  bottom:-1px;
+  left:50%;
+  transform:translateX(-50%);
+  width:120px;
+  height:3px;
+  background:var(--gradient-primary);
+  border-radius:var(--radius-full);
+}
+.header h1 {
+  font-size:32px;
+  font-weight:800;
+  letter-spacing:-0.5px;
+  background:var(--gradient-primary);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:8px;
+}
+.header .sub {
+  margin-top:8px;
+  font-size:15px;
+  color:var(--text-secondary);
+  font-weight:400;
+}
+.header .date-badge {
+  display:inline-block;
+  margin-top:18px;
+  background:rgba(167,139,250,0.1);
+  border:1px solid rgba(167,139,250,0.25);
+  border-radius:var(--radius-full);
+  padding:8px 22px;
+  font-size:14px;
+  color:#a78bfa;
+  font-weight:500;
+  backdrop-filter:blur(8px);
+}
+.stats-row {
+  display:flex;
+  gap:16px;
+  margin-bottom:36px;
+}
+.stat-card {
+  flex:1;
+  background:var(--card-bg);
+  border-radius:var(--radius-lg);
+  padding:20px 24px;
+  text-align:center;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.stat-card:hover {
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
+.stat-card .num { font-size:32px; font-weight:800; margin-bottom:4px; }
+.stat-card .label { font-size:13px; color:var(--text-secondary); font-weight:500; letter-spacing:0.5px; }
+.stat-card.red .num {
+  background:var(--gradient-warning);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.stat-card.yellow .num {
+  background:var(--gradient-warning);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.stat-card.green .num {
+  background:var(--gradient-success);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.section { margin-bottom:36px; }
+.section-title {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:20px;
+  font-size:20px;
+  font-weight:700;
+  padding-bottom:12px;
+  border-bottom:2px solid var(--border);
+}
+.section-title .dot {
+  width:12px; height:12px; border-radius:50%;
+  box-shadow:0 0 0 3px rgba(229,92,92,0.2);
+}
+.section-title .dot.red { background:var(--accent-red); box-shadow:0 0 0 3px rgba(229,92,92,0.2); }
+.section-title .dot.yellow { background:var(--accent-yellow); box-shadow:0 0 0 3px rgba(224,169,68,0.2); }
+.section-title .dot.green { background:var(--accent-green); box-shadow:0 0 0 3px rgba(92,186,123,0.2); }
+.card {
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  padding:24px 28px;
+  margin-bottom:16px;
+  box-shadow:var(--shadow-sm);
+  transition:border-color 0.2s, box-shadow 0.2s;
+}
+.card:hover { border-color:#3a3d50; box-shadow:var(--shadow-md); }
+.card-header {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:14px;
+}
+.card-title { font-size:16px; font-weight:600; line-height:1.5; flex:1; }
+.tags { display:flex; gap:8px; flex-shrink:0; flex-wrap:wrap; }
+.tag {
+  font-size:12px;
+  padding:4px 12px;
+  border-radius:var(--radius-full);
+  font-weight:600;
+  letter-spacing:0.3px;
+  text-transform:uppercase;
+}
+.tag.red { background:var(--tag-red-bg); color:var(--accent-red); border:1px solid rgba(229,92,92,0.3); }
+.tag.yellow { background:var(--tag-yellow-bg); color:var(--accent-yellow); border:1px solid rgba(224,169,68,0.3); }
+.tag.green { background:var(--tag-green-bg); color:var(--accent-green); border:1px solid rgba(92,186,123,0.3); }
+.tag.ai { background:rgba(96,165,250,0.12); color:#60a5fa; border:1px solid rgba(96,165,250,0.3); }
+.card-summary { font-size:14px; color:var(--text-secondary); margin-bottom:16px; line-height:1.6; }
+.card-impact {
+  background:var(--card-bg-alt);
+  border-radius:var(--radius-md);
+  padding:16px 20px;
+  font-size:14px;
+  color:#a5b4d0;
+  border-left:4px solid #4f5d7a;
+  position:relative;
+  overflow:hidden;
+}
+.card-impact::before {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:4px;
+  height:100%;
+  background:linear-gradient(to bottom, #a78bfa, #60a5fa);
+}
+.card-impact strong { color:#c4b5fd; font-weight:600; }
+.source-line {
+  margin-top:16px;
+  font-size:12px;
+  color:#555;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.source-line span { padding:2px 8px; background:rgba(0,0,0,0.1); border-radius:4px; }
+.cat-section { margin-bottom:40px; }
+.cat-heading {
+  font-size:18px;
+  font-weight:700;
+  color:#a78bfa;
+  padding-bottom:12px;
+  border-bottom:2px solid rgba(167,139,250,0.15);
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.cat-heading .icon { font-size:20px; }
+.footer {
+  text-align:center;
+  padding:32px 0;
+  border-top:1px solid var(--border);
+  margin-top:40px;
+  font-size:13px;
+  color:var(--text-secondary);
+}
+.footer p { margin:6px 0; line-height:1.5; }
+.footer .disclaimer {
+  margin-top:16px;
+  padding:12px 20px;
+  background:rgba(0,0,0,0.1);
+  border-radius:var(--radius-md);
+  font-size:12px;
+  color:#777;
+}
+@media (max-width:640px) {
+  body { padding:24px 16px; }
+  .stats-row { flex-direction:row; flex-wrap:nowrap; gap:8px; }
+  .stat-card { padding:12px 10px; }
+  .stat-card .num { font-size:24px; }
+  .stat-card .label { font-size:11px; }
+  .card { padding:20px; }
+  .card-header { flex-direction:column; gap:12px; }
+  .tags { justify-content:flex-start; }
+  .header h1 { font-size:28px; }
+  .section-title { font-size:18px; }
+}
+@media (max-width:480px) {
+  body { padding:20px 12px; }
+  .stats-row { flex-direction:row; flex-wrap:nowrap; gap:6px; }
+  .stat-card { padding:10px 8px; }
+  .stat-card .num { font-size:22px; }
+  .stat-card .label { font-size:10px; }
+  .header h1 { font-size:24px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>全球要闻日报</h1>
+  <div class="sub">覆盖全球 · 聚焦AI · 交叉验证 · 白话解读</div>
+  <div class="date-badge">{formatted_date}</div>
+</div>
+
+<div class="stats-row">
+  <div class="stat-card red">
+    <div class="num">{high_count}</div>
+    <div class="label">高影响力事件</div>
+  </div>
+  <div class="stat-card yellow">
+    <div class="num">{mid_count}</div>
+    <div class="label">中影响力事件</div>
+  </div>
+  <div class="stat-card green">
+    <div class="num">{low_count}</div>
+    <div class="label">低影响力事件</div>
+  </div>
+</div>
+
+{content}
+
+<div class="footer">
+  <p>全球要闻日报 · 自动生成于 {date}</p>
+  <p>影响力评级基于对中国普通个人的直接/间接触及程度</p>
+  <div class="disclaimer">
+    本报告由 AI 自动聚合生成，信息仅供参考，不构成任何投资或行动建议。<br>
+    配色方案：深色主题 + 高级灰蓝配色 + 扁平圆角设计
+  </div>
+</div>
+
+</div>
+</body>
+</html>

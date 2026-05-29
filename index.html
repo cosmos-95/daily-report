@@ -4,280 +4,76 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>全球要闻日报 · 索引</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0f1117;
-  --card-bg: #1a1d27;
-  --card-bg-alt: #1e2130;
-  --text: #e4e6ed;
-  --text-secondary: #9ca0b0;
-  --accent-red: #e55c5c;
-  --accent-yellow: #e0a944;
-  --accent-green: #5cba7b;
-  --border: #2a2d3a;
-  --gradient-primary: linear-gradient(135deg, #a78bfa, #60a5fa);
-  --gradient-secondary: linear-gradient(135deg, #f472b6, #ec4899);
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
-  --radius-full: 9999px;
+  --bg-top: #0F1520; --bg-mid: #0B0F1A; --bg-bottom: #0A0E17;
+  --card-bg: #111827;
+  --card-border: rgba(255,255,255,0.06);
+  --card-border-hover: rgba(255,255,255,0.10);
+  --text-primary: #E5E7EB; --text-secondary: #9CA3AF; --text-tertiary: #6B7280;
+  --accent-blue: #3B82F6; --accent-cyan: #14B8A6; --accent-green: #10B981;
+  --accent-amber: #F59E0B; --accent-red: #EF4444; --source-green: #059669;
+  --bg-info: #1E3A8A; --bg-success: #064E3B; --bg-warning: #78350F; --bg-danger: #7F1D1D;
+  --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px; --radius-full: 999px;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: "Noto Serif SC", ui-serif, Georgia, serif;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height:1.7;
-  padding:32px 24px;
-  min-height:100vh;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:var(--font-body);
+  background:linear-gradient(180deg,var(--bg-top) 0%,var(--bg-mid) 50%,var(--bg-bottom) 100%);
+  color:var(--text-primary);line-height:1.6;min-height:100vh;
 }
-.container { 
-  max-width:860px; 
-  margin:0 auto; 
-}
-/* Header */
-.header {
-  text-align:center;
-  padding:24px 0 28px;
-  border-bottom:1px solid var(--border);
-  margin-bottom:24px;
-  position:relative;
-}
-.header::after {
-  content:'';
-  position:absolute;
-  bottom:-1px;
-  left:50%;
-  transform:translateX(-50%);
-  width:80px;
-  height:3px;
-  background:var(--gradient-primary);
-  border-radius:var(--radius-full);
-}
-.header h1 {
-  font-size:28px;
-  font-weight:700;
-  letter-spacing:-0.5px;
-  background:var(--gradient-primary);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  margin-bottom:4px;
-}
-.header .sub {
-  margin-top:4px;
-  font-size:14px;
-  color:var(--text-secondary);
-  font-weight:400;
-}
-.header .date-badge {
-  display:inline-block;
-  margin-top:12px;
-  background:rgba(167,139,250,0.1);
-  border:1px solid rgba(167,139,250,0.25);
-  border-radius:var(--radius-full);
-  padding:5px 18px;
-  font-size:13px;
-  color:#a78bfa;
-  font-weight:500;
-}
-/* Stats - compact inline */
-.stats-row {
-  display:flex;
-  gap:12px;
-  margin-bottom:20px;
-}
-.stat-card {
-  flex:1;
-  background:var(--card-bg);
-  border-radius:var(--radius-md);
-  padding:10px 16px;
-  text-align:center;
-  border:1px solid var(--border);
-  box-shadow:var(--shadow-sm);
-}
-.stat-card .num { 
-  font-size:20px; 
-  font-weight:700; 
-  margin-bottom:0;
-  line-height:1.3;
-}
-.stat-card .label { 
-  font-size:11px; 
-  color:var(--text-secondary); 
-  font-weight:500;
-  letter-spacing:0.3px;
-}
-.stat-card.red .num { 
-  background:var(--gradient-secondary);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-}
-.stat-card.blue .num { 
-  background:var(--gradient-primary);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-}
-/* Filter */
-.filter-section {
-  margin-bottom:20px;
-}
-.filter-title {
-  font-size:15px;
-  font-weight:600;
-  margin-bottom:10px;
-  color:#a78bfa;
-}
-.filter-options {
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-.filter-btn {
-  background:var(--card-bg);
-  border:1px solid var(--border);
-  border-radius:var(--radius-full);
-  padding:6px 16px;
-  font-size:13px;
-  color:var(--text-secondary);
-  cursor:pointer;
-  transition:all 0.2s;
-  font-weight:500;
-}
-.filter-btn:hover {
-  border-color:#9d7bff;
-  color:#7b68ee;
-}
-.filter-btn.active {
-  background:rgba(157,123,255,0.12);
-  border-color:#9d7bff;
-  color:#7b68ee;
-}
-/* Reports List */
-.reports-section {
-  margin-bottom:32px;
-}
-.reports-title {
-  font-size:17px;
-  font-weight:700;
-  margin-bottom:14px;
-  padding-bottom:10px;
-  border-bottom:2px solid var(--border);
-}
-.report-list {
-  display:grid;
-  gap:12px;
-}
-.report-card {
-  background:var(--card-bg);
-  border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-  padding:16px 20px;
-  transition:border-color 0.2s, box-shadow 0.2s;
-  text-decoration:none;
-  color:inherit;
-  display:block;
-}
-.report-card:hover {
-  border-color:#d5cfe0;
-  box-shadow:var(--shadow-md);
-}
-.report-header {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:8px;
-}
-.report-date {
-  font-size:16px;
-  font-weight:700;
-  color:#7b68ee;
-}
-.report-tag {
-  font-size:11px;
-  padding:3px 10px;
-  border-radius:var(--radius-full);
-  font-weight:600;
-  background:rgba(90,140,255,0.12);
-  color:#5a8cff;
-}
-.report-summary {
-  font-size:13px;
-  color:var(--text-secondary);
-  line-height:1.6;
-  margin-bottom:10px;
-}
-.report-meta {
-  display:flex;
-  gap:14px;
-  font-size:11px;
-  color:#9995b3;
-}
-.report-meta span {
-  display:flex;
-  align-items:center;
-  gap:4px;
-}
-/* Footer */
-.footer {
-  text-align:center;
-  padding:24px 0;
-  border-top:1px solid var(--border);
-  margin-top:32px;
-  font-size:12px;
-  color:var(--text-secondary);
-}
-.footer p { 
-  margin:4px 0; 
-  line-height:1.5;
-}
-.footer .disclaimer {
-  margin-top:12px;
-  padding:10px 16px;
-  background:var(--card-bg-alt);
-  border-radius:var(--radius-md);
-  font-size:11px;
-  color:#9995b3;
-}
-/* Responsive */
-@media (max-width:640px) {
-  body { padding:20px 16px; }
-  .stats-row { flex-direction:column; }
-  .report-card { padding:14px; }
-  .header h1 { font-size:24px; }
-}
-@media (max-width:480px) {
-  body { padding:16px 12px; }
-  .header h1 { font-size:22px; }
-  .stat-card .num { font-size:18px; }
-}
+.container{max-width:780px;margin:0 auto;padding:48px 24px}
+.header{text-align:center;padding:20px 0 36px;margin-bottom:32px;border-bottom:1px solid var(--card-border)}
+.header h1{font-family:var(--font-display);font-size:30px;font-weight:700;color:#FFF;margin-bottom:4px}
+.header .sub{font-size:13px;color:var(--text-secondary);font-weight:400;letter-spacing:.8px}
+.header .date-badge{display:inline-block;margin-top:18px;padding:6px 16px;background:var(--bg-info);border:1px solid #2563EB;border-radius:var(--radius-full);font-size:13px;font-weight:500;color:var(--accent-blue)}
+.stats-row{display:flex;gap:12px;margin-bottom:24px}
+.stat-card{flex:1;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md);padding:16px 18px;text-align:center;box-shadow:0 4px 6px -1px rgba(0,0,0,.3),0 2px 4px -1px rgba(0,0,0,.2);transition:box-shadow .2s,transform .2s,border-color .2s}
+.stat-card:hover{box-shadow:0 10px 15px -3px rgba(0,0,0,.5);transform:translateY(-1px);border-color:var(--card-border-hover)}
+.stat-card .num{font-family:var(--font-mono);font-size:24px;font-weight:500;margin-bottom:2px;line-height:1}
+.stat-card .label{font-size:11px;color:var(--text-secondary);font-weight:500;letter-spacing:.3px;text-transform:uppercase}
+.stat-card.red .num{color:var(--accent-red)}.stat-card.blue .num{color:var(--accent-blue)}
+.filter-section{margin-bottom:24px}
+.filter-title{font-family:var(--font-display);font-size:15px;font-weight:700;color:#D1D5DB;padding:10px 0 10px 14px;border-left:3px solid var(--accent-cyan);border-bottom:1px solid var(--card-border);margin-bottom:14px}
+.filter-options{display:flex;gap:8px;flex-wrap:wrap}
+.filter-btn{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-full);padding:5px 14px;font-size:12px;color:var(--text-secondary);cursor:pointer;transition:all .2s;font-weight:500}
+.filter-btn:hover{border-color:var(--accent-cyan);color:var(--accent-cyan)}
+.filter-btn.active{background:var(--bg-info);border-color:#2563EB;color:var(--accent-blue)}
+.reports-section{margin-bottom:32px}
+.reports-title{font-family:var(--font-display);font-size:17px;font-weight:700;color:#D1D5DB;padding:10px 0 10px 14px;border-left:3px solid var(--accent-cyan);border-bottom:1px solid var(--card-border);margin-bottom:14px}
+.report-list{display:grid;gap:10px}
+.report-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md);padding:18px 22px;transition:border-color .2s,box-shadow .2s;text-decoration:none;color:inherit;display:block;box-shadow:0 4px 6px -1px rgba(0,0,0,.2),0 2px 4px -1px rgba(0,0,0,.15)}
+.report-card:hover{border-color:var(--card-border-hover);box-shadow:0 10px 15px -3px rgba(0,0,0,.4)}
+.report-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.report-date{font-size:15px;font-weight:600;color:var(--accent-cyan)}
+.report-tag{font-size:11px;padding:3px 10px;border-radius:var(--radius-full);font-weight:500;background:var(--bg-info);color:var(--accent-blue);border:1px solid #2563EB}
+.report-summary{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px}
+.report-meta{display:flex;gap:14px;font-size:11px;color:var(--text-tertiary)}
+.report-meta span{display:flex;align-items:center;gap:4px}
+.footer{text-align:center;padding:28px 0;margin-top:36px;border-top:1px solid var(--card-border);font-size:12px;color:var(--text-tertiary)}
+.footer p{margin:4px 0;line-height:1.5}
+.footer .disclaimer{margin-top:12px;padding:10px 18px;background:rgba(255,255,255,.03);border-radius:var(--radius-sm);font-size:11px;color:var(--text-tertiary);border:1px solid var(--card-border)}
+@media(max-width:640px){.container{padding:32px 16px}.stats-row{flex-direction:column;gap:8px}.report-card{padding:14px 16px}.header h1{font-size:24px}}
+@media(max-width:480px){.container{padding:24px 12px}.header h1{font-size:20px}.stat-card .num{font-size:20px}}
 </style>
 </head>
 <body>
 <div class="container">
-
 <div class="header">
   <h1>全球要闻日报</h1>
   <div class="sub">每日精选 · 聚焦AI · 白话解读</div>
   <div class="date-badge">索引页 · 按日期查看历史报告</div>
 </div>
-
 <div class="stats-row">
-  <div class="stat-card red">
-    <div class="num" id="total-reports">1</div>
-    <div class="label">历史报告总数</div>
-  </div>
-  <div class="stat-card blue">
-    <div class="num" id="latest-date">2026-05-27</div>
-    <div class="label">最新报告日期</div>
-  </div>
+  <div class="stat-card red"><div class="num" id="total-reports">1</div><div class="label">历史报告总数</div></div>
+  <div class="stat-card blue"><div class="num" id="latest-date">2026-05-27</div><div class="label">最新报告日期</div></div>
 </div>
-
 <div class="filter-section">
   <div class="filter-title">筛选</div>
   <div class="filter-options">
@@ -287,109 +83,23 @@ body {
     <button class="filter-btn" onclick="filterReports('ai')">AI专题</button>
   </div>
 </div>
-
 <div class="reports-section">
   <div class="reports-title">历史报告</div>
-  <div class="report-list" id="report-list">
-    <!-- 报告列表由JavaScript动态生成 -->
-    <div class="report-card">
-      <div class="report-header">
-        <div class="report-date">2026年5月27日 · 周三</div>
-        <div class="report-tag">AI专题</div>
-      </div>
-      <div class="report-summary">DeepSeek V4 Pro 永久降价75%引爆全球大模型价格战；美光科技市值突破1万亿美元；Google I/O 2026发布AI全家桶；华为宣称2031年可自研1.4nm芯片...</div>
-      <div class="report-meta">
-        <span>高影响力事件: 8</span>
-        <span>中影响力事件: 8</span>
-        <span>低影响力事件: 6</span>
-      </div>
-    </div>
-  </div>
+  <div class="report-list" id="report-list"></div>
 </div>
-
 <div class="footer">
   <p>全球要闻日报 · 自动生成 · 每日更新</p>
   <p>点击报告卡片即可查看当日完整内容</p>
-  <div class="disclaimer">
-    本索引页自动更新，每天上午9点自动添加新报告。<br>
-    配色方案：深色主题 + 高级灰蓝配色 + 扁平圆角设计
-  </div>
+  <div class="disclaimer">本索引页自动更新，每天上午9点自动添加新报告。</div>
 </div>
-
+</div>
 <script>
-// 报告数据
-const reports = [
-  {
-    date: "2026年5月28日",
-    weekday: "周四",
-    filename: "daily_report_20260528.html",
-    summary: "伊美停火框架曝光油价暴跌5.5%；规上工业利润增18.2%；英伟达砸1500亿美元投资台湾芯片；年度立法计划发布将制定金融法、医疗保障法",
-    highCount: 6,
-    midCount: 15,
-    lowCount: 0,
-    tags: ["ai"]
-  },
-  {
-    date: "2026年5月27日",
-    weekday: "周三",
-    filename: "daily_report_20260527.html",
-    summary: "DeepSeek V4 Pro 永久降价75%引爆全球大模型价格战；美光科技市值突破1万亿美元；Google I/O 2026发布AI全家桶；华为宣称2031年可自研1.4nm芯片...",
-    highCount: 8,
-    midCount: 8,
-    lowCount: 6,
-    tags: ["ai"]
-  }
-];
-
-// 更新统计数据
-document.getElementById('total-reports').textContent = reports.length;
-document.getElementById('latest-date').textContent = reports[0].date.replace('年', '-').replace('月', '-').replace('日', '');
-
-// 生成报告列表
-function renderReports(filter = 'all') {
-  const container = document.getElementById('report-list');
-  let filtered = [...reports];
-  
-  // 筛选逻辑
-  if (filter === 'week') {
-    filtered = reports.slice(0, Math.min(7, reports.length));
-  } else if (filter === 'month') {
-    filtered = reports.slice(0, Math.min(30, reports.length));
-  } else if (filter === 'ai') {
-    filtered = reports.filter(r => r.tags.includes('ai'));
-  }
-  
-  container.innerHTML = filtered.map(report => `
-    <a href="${report.filename}" class="report-card">
-      <div class="report-header">
-        <div class="report-date">${report.date} · ${report.weekday}</div>
-        <div class="report-tag">${report.tags.includes('ai') ? 'AI专题' : '综合'}</div>
-      </div>
-      <div class="report-summary">${report.summary}</div>
-      <div class="report-meta">
-        <span>高影响力事件: ${report.highCount}</span>
-        <span>中影响力事件: ${report.midCount}</span>
-        <span>低影响力事件: ${report.lowCount}</span>
-      </div>
-    </a>
-  `).join('');
-}
-
-// 筛选函数
-function filterReports(type) {
-  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
-  renderReports(type);
-}
-
-// 初始渲染
+const reports=[{date:"2026年5月29日",weekday:"周五",filename:"daily_report_20260529.html",summary:"美伊谈判扑朔迷离原油巨震；比亚迪发布中国首款4nm智驾芯片；美股AI软硬件齐暴涨续创新高",highCount:6,midCount:15,lowCount:0,tags:["ai"]},{date:"2026年5月28日",weekday:"周四",filename:"daily_report_20260528.html",summary:"伊美停火框架曝光油价暴跌5.5%；规上工业利润增18.2%；英伟达砸1500亿美元投资台湾芯片；年度立法计划发布将制定金融法、医疗保障法",highCount:6,midCount:15,lowCount:0,tags:["ai"]},{date:"2026年5月27日",weekday:"周三",filename:"daily_report_20260527.html",summary:"DeepSeek V4 Pro 永久降价75%引爆全球大模型价格战；美光科技市值突破1万亿美元；Google I/O 2026发布AI全家桶；华为宣称2031年可自研1.4nm芯片...",highCount:8,midCount:8,lowCount:6,tags:["ai"]}];
+document.getElementById('total-reports').textContent=reports.length;
+document.getElementById('latest-date').textContent=reports[0].date.replace('年','-').replace('月','-').replace('日','');
+function renderReports(filter='all'){let f=[...reports];if(filter==='week')f=reports.slice(0,Math.min(7,reports.length));else if(filter==='month')f=reports.slice(0,Math.min(30,reports.length));else if(filter==='ai')f=reports.filter(r=>r.tags.includes('ai'));document.getElementById('report-list').innerHTML=f.map(r=>'<a href="'+r.filename+'" class="report-card"><div class="report-header"><div class="report-date">'+r.date+' · '+r.weekday+'</div><div class="report-tag">'+(r.tags.includes('ai')?'AI专题':'综合')+'</div></div><div class="report-summary">'+r.summary+'</div><div class="report-meta"><span>高影响力事件: '+r.highCount+'</span><span>中影响力事件: '+r.midCount+'</span><span>低影响力事件: '+r.lowCount+'</span></div></a>').join('')}
+function filterReports(type){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));event.target.classList.add('active');renderReports(type)}
 renderReports('all');
-
-// 每6小时检查一次
-function checkForNewReports() {
-  console.log('检查新报告...');
-}
-setInterval(checkForNewReports, 6 * 60 * 60 * 1000);
 </script>
 </body>
 </html>
