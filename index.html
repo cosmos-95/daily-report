@@ -4,101 +4,165 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>全球要闻日报 · 索引</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<meta name="description" content="全球要闻日报 - 每日精选全球要闻，聚焦AI，白话解读影响与建议">
 <style>
 :root {
-  --bg-top: #0F1520; --bg-mid: #0B0F1A; --bg-bottom: #0A0E17;
-  --card-bg: #111827;
-  --card-border: rgba(255,255,255,0.06);
-  --card-border-hover: rgba(255,255,255,0.10);
-  --text-primary: #E5E7EB; --text-secondary: #9CA3AF; --text-tertiary: #6B7280;
-  --accent-blue: #3B82F6; --accent-cyan: #14B8A6; --accent-green: #10B981;
-  --accent-amber: #F59E0B; --accent-red: #EF4444; --source-green: #059669;
-  --bg-info: #1E3A8A; --bg-success: #064E3B; --bg-warning: #78350F; --bg-danger: #7F1D1D;
-  --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px; --radius-full: 999px;
-  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-display: "Noto Serif SC", ui-serif, Georgia, serif;
+  --bg-top:#0F1520; --bg-mid:#0B0F1A; --bg-bottom:#0A0E17;
+  --card-bg:#111827; --card-border:rgba(255,255,255,0.06); --card-border-hover:rgba(255,255,255,0.10);
+  --text-primary:#E5E7EB; --text-secondary:#9CA3AF; --text-tertiary:#6B7280;
+  --accent-blue:#3B82F6; --accent-cyan:#14B8A6; --accent-green:#10B981; --accent-amber:#F59E0B; --accent-red:#EF4444;
+  --bg-info:#1E3A8A; --bg-success:#064E3B; --bg-warning:#78350F; --bg-danger:#7F1D1D;
+  --radius-sm:6px; --radius-md:10px; --radius-lg:14px; --radius-full:999px;
+  --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --font-mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,"Noto Sans Mono SC",monospace;
+  --font-display:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:var(--font-body);
-  background:linear-gradient(180deg,var(--bg-top) 0%,var(--bg-mid) 50%,var(--bg-bottom) 100%);
-  color:var(--text-primary);line-height:1.6;min-height:100vh;
-}
+body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg-top) 0%,var(--bg-mid) 50%,var(--bg-bottom) 100%);color:var(--text-primary);line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .container{max-width:780px;margin:0 auto;padding:48px 24px}
+/* Header */
 .header{text-align:center;padding:20px 0 36px;margin-bottom:32px;border-bottom:1px solid var(--card-border)}
-.header h1{font-family:var(--font-display);font-size:30px;font-weight:700;color:#FFF;margin-bottom:4px}
+.header h1{font-size:30px;font-weight:700;color:#FFF;margin-bottom:4px}
 .header .sub{font-size:13px;color:var(--text-secondary);font-weight:400;letter-spacing:.8px}
-.header .date-badge{display:inline-block;margin-top:18px;padding:6px 16px;background:var(--bg-info);border:1px solid #2563EB;border-radius:var(--radius-full);font-size:13px;font-weight:500;color:var(--accent-blue)}
+.header .date-badge{display:inline-block;margin-top:18px;padding:6px 20px;background:rgba(30,58,138,.5);border:1px solid rgba(59,130,246,.3);border-radius:var(--radius-full);font-size:13px;font-weight:500;color:#FFF;font-family:var(--font-mono);letter-spacing:.5px}
+/* Stats */
 .stats-row{display:flex;gap:12px;margin-bottom:24px}
-.stat-card{flex:1;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md);padding:16px 18px;text-align:center;box-shadow:0 4px 6px -1px rgba(0,0,0,.3),0 2px 4px -1px rgba(0,0,0,.2);transition:box-shadow .2s,transform .2s,border-color .2s}
+.stat-card{flex:1;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md);padding:16px 18px;text-align:center;transition:box-shadow .2s,transform .2s,border-color .2s}
 .stat-card:hover{box-shadow:0 10px 15px -3px rgba(0,0,0,.5);transform:translateY(-1px);border-color:var(--card-border-hover)}
-.stat-card .num{font-family:var(--font-mono);font-size:24px;font-weight:500;margin-bottom:2px;line-height:1}
-.stat-card .label{font-size:11px;color:var(--text-secondary);font-weight:500;letter-spacing:.3px;text-transform:uppercase}
+.stat-card .num{font-family:var(--font-mono);font-size:24px;font-weight:600;margin-bottom:2px;line-height:1}
+.stat-card .label{font-size:11px;color:var(--text-secondary);font-weight:500;letter-spacing:.3px}
 .stat-card.red .num{color:var(--accent-red)}.stat-card.blue .num{color:var(--accent-blue)}
+/* Quick Date Bar */
+.date-bar{display:flex;gap:6px;margin-bottom:24px;flex-wrap:wrap}
+.date-btn{flex:1;min-width:72px;padding:8px 6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md);text-align:center;text-decoration:none;color:var(--text-secondary);font-size:12px;transition:all .2s}
+.date-btn:hover{border-color:var(--accent-cyan);color:var(--accent-cyan);transform:translateY(-1px)}
+.date-btn .d{font-family:var(--font-mono);font-size:14px;font-weight:600;line-height:1.3}
+.date-btn .w{font-size:10px;opacity:.7}
+.date-btn.empty{opacity:0.3;pointer-events:none;border-style:dashed}
+.date-btn.today{border-color:var(--accent-cyan);background:rgba(20,184,166,.08)}
+/* Filter */
 .filter-section{margin-bottom:24px}
-.filter-title{font-family:var(--font-display);font-size:15px;font-weight:700;color:#D1D5DB;padding:10px 0 10px 14px;border-left:3px solid var(--accent-cyan);border-bottom:1px solid var(--card-border);margin-bottom:14px}
+.filter-title{font-size:15px;font-weight:700;color:#D1D5DB;padding:10px 0 10px 14px;border-left:3px solid var(--accent-cyan);border-bottom:1px solid var(--card-border);margin-bottom:14px}
 .filter-options{display:flex;gap:8px;flex-wrap:wrap}
-.filter-btn{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-full);padding:5px 14px;font-size:12px;color:var(--text-secondary);cursor:pointer;transition:all .2s;font-weight:500}
+.filter-btn{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-full);padding:5px 14px;font-size:12px;color:var(--text-secondary);cursor:pointer;transition:all .2s;font-weight:500;user-select:none}
 .filter-btn:hover{border-color:var(--accent-cyan);color:var(--accent-cyan)}
-.filter-btn.active{background:var(--bg-info);border-color:#2563EB;color:var(--accent-blue)}
+.filter-btn.active{background:rgba(30,58,138,.5);border-color:rgba(59,130,246,.3);color:#93C5FD}
+/* Report List */
 .reports-section{margin-bottom:32px}
-.reports-title{font-family:var(--font-display);font-size:17px;font-weight:700;color:#D1D5DB;padding:10px 0 10px 14px;border-left:3px solid var(--accent-cyan);border-bottom:1px solid var(--card-border);margin-bottom:14px}
+.reports-title{font-size:17px;font-weight:700;color:#D1D5DB;padding:10px 0 10px 14px;border-left:3px solid var(--accent-cyan);border-bottom:1px solid var(--card-border);margin-bottom:14px}
 .report-list{display:grid;gap:10px}
-.report-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md);padding:18px 22px;transition:border-color .2s,box-shadow .2s;text-decoration:none;color:inherit;display:block;box-shadow:0 4px 6px -1px rgba(0,0,0,.2),0 2px 4px -1px rgba(0,0,0,.15)}
+.report-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md);padding:18px 22px;transition:border-color .2s,box-shadow .2s;text-decoration:none;color:inherit;display:block}
 .report-card:hover{border-color:var(--card-border-hover);box-shadow:0 10px 15px -3px rgba(0,0,0,.4)}
 .report-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
 .report-date{font-size:15px;font-weight:600;color:var(--accent-cyan)}
-.report-tag{font-size:11px;padding:3px 10px;border-radius:var(--radius-full);font-weight:500;background:var(--bg-info);color:var(--accent-blue);border:1px solid #2563EB}
+.report-tag{font-size:11px;padding:3px 10px;border-radius:var(--radius-full);font-weight:500;background:rgba(30,58,138,.5);color:#93C5FD;border:1px solid rgba(59,130,246,.3)}
 .report-summary{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px}
-.report-meta{display:flex;gap:14px;font-size:11px;color:var(--text-tertiary)}
+.report-meta{display:flex;gap:14px;font-size:11px;color:var(--text-tertiary);flex-wrap:wrap}
 .report-meta span{display:flex;align-items:center;gap:4px}
+/* Footer */
 .footer{text-align:center;padding:28px 0;margin-top:36px;border-top:1px solid var(--card-border);font-size:12px;color:var(--text-tertiary)}
 .footer p{margin:4px 0;line-height:1.5}
 .footer .disclaimer{margin-top:12px;padding:10px 18px;background:rgba(255,255,255,.03);border-radius:var(--radius-sm);font-size:11px;color:var(--text-tertiary);border:1px solid var(--card-border)}
-@media(max-width:640px){.container{padding:32px 16px}.stats-row{flex-direction:column;gap:8px}.report-card{padding:14px 16px}.header h1{font-size:24px}}
-@media(max-width:480px){.container{padding:24px 12px}.header h1{font-size:20px}.stat-card .num{font-size:20px}}
+@media(max-width:640px){
+  .container{padding:32px 16px}
+  .stats-row{flex-direction:column;gap:8px}
+  .report-card{padding:14px 16px}
+  .header h1{font-size:24px}
+  .date-btn{min-width:48px;padding:6px 4px;font-size:11px}
+}
+@media(max-width:480px){
+  .container{padding:24px 12px}
+  .header h1{font-size:20px}
+  .stat-card .num{font-size:20px}
+}
 </style>
 </head>
 <body>
 <div class="container">
-<div class="header">
-  <h1>全球要闻日报</h1>
-  <div class="sub">每日精选 · 聚焦AI · 白话解读</div>
-  <div class="date-badge">索引页 · 按日期查看历史报告</div>
-</div>
-<div class="stats-row">
-  <div class="stat-card red"><div class="num" id="total-reports">1</div><div class="label">历史报告总数</div></div>
-  <div class="stat-card blue"><div class="num" id="latest-date">2026-05-27</div><div class="label">最新报告日期</div></div>
-</div>
-<div class="filter-section">
-  <div class="filter-title">筛选</div>
-  <div class="filter-options">
-    <button class="filter-btn active" onclick="filterReports('all')">全部报告</button>
-    <button class="filter-btn" onclick="filterReports('week')">最近一周</button>
-    <button class="filter-btn" onclick="filterReports('month')">最近一月</button>
-    <button class="filter-btn" onclick="filterReports('ai')">AI专题</button>
+  <div class="header">
+    <h1>全球要闻日报</h1>
+    <div class="sub">每日精选 · 聚焦AI · 白话解读</div>
+    <div class="date-badge">索引页 · 按日期查看历史报告</div>
+  </div>
+  <div class="stats-row">
+    <div class="stat-card red"><div class="num" id="total-reports">0</div><div class="label">历史报告总数</div></div>
+    <div class="stat-card blue"><div class="num" id="latest-date">--</div><div class="label">最新报告日期</div></div>
+  </div>
+  <div class="date-bar" id="date-bar"></div>
+  <div class="filter-section">
+    <div class="filter-title">筛选</div>
+    <div class="filter-options">
+      <button class="filter-btn active" onclick="filterReports('all')">全部报告</button>
+      <button class="filter-btn" onclick="filterReports('week')">最近一周</button>
+      <button class="filter-btn" onclick="filterReports('month')">最近一月</button>
+      <button class="filter-btn" onclick="filterReports('ai')">AI专题</button>
+    </div>
+  </div>
+  <div class="reports-section">
+    <div class="reports-title">📋 历史报告</div>
+    <div class="report-list" id="report-list"></div>
+  </div>
+  <div class="footer">
+    <p>全球要闻日报 · 自动生成 · 每日更新</p>
+    <p>点击报告卡片即可查看当日完整内容</p>
+    <div class="disclaimer">本报告由 AI 自动聚合生成，信息仅供参考，不构成任何投资或行动建议。</div>
   </div>
 </div>
-<div class="reports-section">
-  <div class="reports-title">历史报告</div>
-  <div class="report-list" id="report-list"></div>
-</div>
-<div class="footer">
-  <p>全球要闻日报 · 自动生成 · 每日更新</p>
-  <p>点击报告卡片即可查看当日完整内容</p>
-  <div class="disclaimer">本索引页自动更新，每天上午9点自动添加新报告。</div>
-</div>
-</div>
 <script>
-const reports=[{date:"2026年5月29日",weekday:"周五",filename:"daily_report_20260529.html",summary:"伊朗战争霍尔木兹海峡关闭致油价破$120；Google I/O发布Gemini Spark个人AI智能体；普京习近平会晤深化欧亚战略协作；欧盟罚Temu €2亿",highCount:9,midCount:10,lowCount:1,tags:["ai"]},{date:"2026年5月28日",weekday:"周四",filename:"daily_report_20260528.html",summary:"伊美停火框架曝光油价暴跌5.5%；规上工业利润增18.2%；英伟达砸1500亿美元投资台湾芯片；年度立法计划发布将制定金融法、医疗保障法",highCount:6,midCount:15,lowCount:0,tags:["ai"]},{date:"2026年5月27日",weekday:"周三",filename:"daily_report_20260527.html",summary:"DeepSeek V4 Pro 永久降价75%引爆全球大模型价格战；美光科技市值突破1万亿美元；Google I/O 2026发布AI全家桶；华为宣称2031年可自研1.4nm芯片...",highCount:8,midCount:8,lowCount:6,tags:["ai"]}];
-document.getElementById('total-reports').textContent=reports.length;
-document.getElementById('latest-date').textContent=reports[0].date.replace('年','-').replace('月','-').replace('日','');
-function renderReports(filter='all'){let f=[...reports];if(filter==='week')f=reports.slice(0,Math.min(7,reports.length));else if(filter==='month')f=reports.slice(0,Math.min(30,reports.length));else if(filter==='ai')f=reports.filter(r=>r.tags.includes('ai'));document.getElementById('report-list').innerHTML=f.map(r=>'<a href="'+r.filename+'" class="report-card"><div class="report-header"><div class="report-date">'+r.date+' · '+r.weekday+'</div><div class="report-tag">'+(r.tags.includes('ai')?'AI专题':'综合')+'</div></div><div class="report-summary">'+r.summary+'</div><div class="report-meta"><span>高影响力事件: '+r.highCount+'</span><span>中影响力事件: '+r.midCount+'</span><span>低影响力事件: '+r.lowCount+'</span></div></a>').join('')}
-function filterReports(type){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));event.target.classList.add('active');renderReports(type)}
+const reports = [{date:"2026年5月29日",weekday:"周五",filename:"daily_report_20260529.html",summary:"伊朗战争霍尔木兹海峡关闭致油价破$120；Google I/O发布Gemini Spark个人AI智能体；普京习近平会晤深化欧亚战略协作；欧盟罚Temu €2亿",highCount:9,midCount:10,lowCount:1,tags:["ai"]},{date:"2026年5月28日",weekday:"周四",filename:"daily_report_20260528.html",summary:"伊美停火框架曝光油价暴跌5.5%；规上工业利润增18.2%；英伟达砸1500亿美元投资台湾芯片；年度立法计划发布将制定金融法、医疗保障法",highCount:6,midCount:15,lowCount:0,tags:["ai"]},{date:"2026年5月27日",weekday:"周三",filename:"daily_report_20260527.html",summary:"DeepSeek V4 Pro 永久降价75%引爆全球大模型价格战；美光科技市值突破1万亿美元；Google I/O 2026发布AI全家桶；华为宣称2031年可自研1.4nm芯片...",highCount:8,midCount:8,lowCount:6,tags:["ai"]}];
+const WEEKDAYS = ['\u65e5','\u4e00','\u4e8c','\u4e09','\u56db','\u4e94','\u516d'];
+
+document.getElementById('total-reports').textContent = reports.length;
+document.getElementById('latest-date').textContent = reports.length > 0
+  ? reports[0].date.replace('\u5e74','-').replace('\u6708','-').replace('\u65e5','')
+  : '--';
+
+function buildDateBar() {
+  const now = new Date();
+  const bar = document.getElementById('date-bar');
+  let html = '';
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(now);
+    d.setDate(d.getDate() - i);
+    const y = d.getFullYear();
+    const m = String(d.getMonth()+1).padStart(2,'0');
+    const day = String(d.getDate()).padStart(2,'0');
+    const display = m + '/' + day;
+    const wk = WEEKDAYS[d.getDay()];
+    const fn = 'daily_report_' + y + m + day + '.html';
+    const exists = reports.some(function(r) { return r.filename === fn; });
+    const isToday = i === 0;
+    const cls = exists ? (isToday ? 'date-btn today' : 'date-btn') : 'date-btn empty';
+    const href = exists ? fn : '#';
+    html += '<a href="' + href + '" class="' + cls + '"><div class="d">' + display + '</div><div class="w">\u5468' + wk + '</div></a>';
+  }
+  bar.innerHTML = html;
+}
+
+function renderReports(filter) {
+  if (!filter) filter = 'all';
+  var f = reports.slice();
+  if (filter === 'week') f = reports.slice(0, Math.min(7, reports.length));
+  else if (filter === 'month') f = reports.slice(0, Math.min(30, reports.length));
+  else if (filter === 'ai') f = reports.filter(function(r) { return r.tags.indexOf('ai') >= 0; });
+  document.getElementById('report-list').innerHTML = f.map(function(r) {
+    var tag = r.tags.indexOf('ai') >= 0 ? 'AI\u4e13\u9898' : '\u7efc\u5408';
+    var sc = r.sourceCount !== undefined ? '<span>\U0001F4E1 \u4fe1\u6e90: ' + r.sourceCount + '</span>' : '';
+    return '<a href="' + r.filename + '" class="report-card">' +
+      '<div class="report-header"><div class="report-date">' + r.date + ' \u00b7 \u5468' + r.weekday + '</div><div class="report-tag">' + tag + '</div></div>' +
+      '<div class="report-summary">' + r.summary + '</div>' +
+      '<div class="report-meta"><span>\U0001F534 \u9ad8: ' + r.highCount + '</span><span>\U0001F7E1 \u4e2d: ' + r.midCount + '</span><span>\U0001F7E2 \u4f4e: ' + r.lowCount + '</span>' + sc + '</div></a>';
+  }).join('');
+}
+
+function filterReports(type) {
+  var btns = document.querySelectorAll('.filter-btn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+  event.target.classList.add('active');
+  renderReports(type);
+}
+
+buildDateBar();
 renderReports('all');
 </script>
 </body>
