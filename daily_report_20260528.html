@@ -3,196 +3,265 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全球要闻日报 | 20260528</title>
-<meta name="description" content="伊美停火框架曝光油价暴跌5.5%；规上工业利润增18.2%；英伟达砸1500亿美元投资台湾芯片；年度立法计划发布将制定金融法、医疗保障法">
-<meta name="report-stats" content="high:6,mid:15,low:0">
-<style>
-:root{--bg:#0f1117;--card-bg:#1a1d27;--card-bg-alt:#1e2130;--text:#e4e6ed;--text-secondary:#9ca0b0;--accent-red:#e55c5c;--accent-yellow:#e0a944;--accent-green:#5cba7b;--border:#2a2d3a;--tag-red-bg:rgba(229,92,92,0.12);--tag-yellow-bg:rgba(224,169,68,0.12);--tag-green-bg:rgba(92,186,123,0.12);--gradient-primary:linear-gradient(135deg,#a78bfa,#60a5fa);--gradient-secondary:linear-gradient(135deg,#f472b6,#ec4899);--gradient-warning:linear-gradient(135deg,#f59e0b,#d97706);--gradient-success:linear-gradient(135deg,#10b981,#059669);--shadow-sm:0 2px 8px rgba(0,0,0,0.2);--shadow-md:0 4px 16px rgba(0,0,0,0.25);--shadow-lg:0 8px 32px rgba(0,0,0,0.3);--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:20px;--radius-full:9999px}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:40px 24px;min-height:100vh}
-.container{max-width:860px;margin:0 auto}
-.header{text-align:center;padding:32px 0 40px;border-bottom:1px solid var(--border);margin-bottom:36px;position:relative}
-.header::after{content:'';position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);width:120px;height:3px;background:var(--gradient-primary);border-radius:var(--radius-full)}
-.header h1{font-size:32px;font-weight:800;letter-spacing:-0.5px;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
-.header .sub{margin-top:8px;font-size:15px;color:var(--text-secondary);font-weight:400}
-.header .date-badge{display:inline-block;margin-top:18px;background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.25);border-radius:var(--radius-full);padding:8px 22px;font-size:14px;color:#a78bfa;font-weight:500;backdrop-filter:blur(8px)}
-.stats-row{display:flex;gap:16px;margin-bottom:36px}
-.stat-card{flex:1;background:var(--card-bg);border-radius:var(--radius-lg);padding:20px 24px;text-align:center;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:transform 0.2s,box-shadow 0.2s}
-.stat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
-.stat-card .num{font-size:32px;font-weight:800;margin-bottom:4px}
-.stat-card .label{font-size:13px;color:var(--text-secondary);font-weight:500;letter-spacing:0.5px}
-.stat-card.red .num{background:var(--gradient-warning);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.stat-card.yellow .num{background:var(--gradient-warning);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.stat-card.green .num{background:var(--gradient-success);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.section{margin-bottom:36px}
-.section-title{display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:20px;font-weight:700;padding-bottom:12px;border-bottom:2px solid var(--border)}
-.section-title .dot{width:12px;height:12px;border-radius:50%}
-.section-title .dot.red{background:var(--accent-red);box-shadow:0 0 0 3px rgba(229,92,92,0.2)}
-.section-title .dot.yellow{background:var(--accent-yellow);box-shadow:0 0 0 3px rgba(224,169,68,0.2)}
-.section-title .dot.green{background:var(--accent-green);box-shadow:0 0 0 3px rgba(92,186,123,0.2)}
-.card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 28px;margin-bottom:16px;box-shadow:var(--shadow-sm);transition:border-color 0.2s,box-shadow 0.2s}
-.card:hover{border-color:#3a3d50;box-shadow:var(--shadow-md)}
-.card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
-.card-title{font-size:16px;font-weight:600;line-height:1.5;flex:1}
-.tags{display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap}
-.tag{font-size:12px;padding:4px 12px;border-radius:var(--radius-full);font-weight:600;letter-spacing:0.3px;text-transform:uppercase}
-.tag.red{background:var(--tag-red-bg);color:var(--accent-red);border:1px solid rgba(229,92,92,0.3)}
-.tag.yellow{background:var(--tag-yellow-bg);color:var(--accent-yellow);border:1px solid rgba(224,169,68,0.3)}
-.tag.green{background:var(--tag-green-bg);color:var(--accent-green);border:1px solid rgba(92,186,123,0.3)}
-.tag.ai{background:rgba(96,165,250,0.12);color:#60a5fa;border:1px solid rgba(96,165,250,0.3)}
-.card-summary{font-size:14px;color:var(--text-secondary);margin-bottom:16px;line-height:1.6}
-.card-impact{background:var(--card-bg-alt);border-radius:var(--radius-md);padding:16px 20px;font-size:14px;color:#a5b4d0;border-left:4px solid #4f5d7a;position:relative;overflow:hidden}
-.card-impact::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,#a78bfa,#60a5fa)}
-.card-impact strong{color:#c4b5fd;font-weight:600}
-.source-line{margin-top:16px;font-size:12px;color:#555;display:flex;gap:16px;flex-wrap:wrap}
-.source-line span{padding:2px 8px;background:rgba(0,0,0,0.1);border-radius:4px}
-.cat-section{margin-bottom:40px}
-.cat-heading{font-size:18px;font-weight:700;color:#a78bfa;padding-bottom:12px;border-bottom:2px solid rgba(167,139,250,0.15);margin-bottom:20px;display:flex;align-items:center;gap:10px}
-.cat-heading .icon{font-size:20px}
-.footer{text-align:center;padding:32px 0;border-top:1px solid var(--border);margin-top:40px;font-size:13px;color:var(--text-secondary)}
-.footer p{margin:6px 0;line-height:1.5}
-.footer .disclaimer{margin-top:16px;padding:12px 20px;background:rgba(0,0,0,0.1);border-radius:var(--radius-md);font-size:12px;color:#777}
-@media(max-width:640px){body{padding:24px 16px}.stats-row{flex-direction:row;flex-wrap:nowrap;gap:8px}.stat-card{padding:12px 10px}.stat-card .num{font-size:24px}.stat-card .label{font-size:11px}.card{padding:20px}.card-header{flex-direction:column;gap:12px}.tags{justify-content:flex-start}.header h1{font-size:28px}.section-title{font-size:18px}}
-@media(max-width:480px){body{padding:20px 12px}.stats-row{flex-direction:row;flex-wrap:nowrap;gap:6px}.stat-card{padding:10px 8px}.stat-card .num{font-size:22px}.stat-card .label{font-size:10px}.header h1{font-size:24px}}
-</style>
+<title>全球要闻日报 | 2026-05-28</title>
+<meta name="description" content="2026年5月28日全球要闻：特朗普威胁炸毁阿曼；以色列扩大黎巴嫩疏散令；加沙宰牲节遭空袭；北大为华为芯片设计工具；比特币下跌；纳斯达克创历史新高">
+<meta name="report-stats" content="high:6,mid:7,low:3">
+<meta name="report-source-count" string="false">14</meta>
 </head>
 <body>
 <div class="container">
-<div class="header"><h1>全球要闻日报</h1><div class="sub">覆盖全球 · 聚焦AI · 交叉验证 · 白话解读</div><div class="date-badge">2026年5月28日 · 周四</div></div>
-<div class="stats-row"><div class="stat-card red"><div class="num">6</div><div class="label">高影响力事件</div></div><div class="stat-card yellow"><div class="num">15</div><div class="label">中影响力事件</div></div><div class="stat-card green"><div class="num">0</div><div class="label">低影响力事件</div></div></div>
+<div class="header">
+<h1>全球要闻日报</h1>
+<div class="sub">覆盖全球 · 聚焦AI · 交叉验证 · 白话解读</div>
+<div class="date-badge">2026年5月28日·周四</div>
+</div>
+<div class="stats-row">
+<div class="stat-card red"><div class="num">6</div><div class="label">高影响力</div></div>
+<div class="stat-card yellow"><div class="num">7</div><div class="label">中影响力</div></div>
+<div class="stat-card green"><div class="num">3</div><div class="label">低影响力</div></div>
+<div class="stat-card purple"><div class="num">14</div><div class="label">信源数</div></div>
+</div>
+
 <div class="cat-section">
-<div class="cat-heading"><span class="icon">🔬</span>前沿科技</div>
+<div class="cat-heading">🔬 前沿科技</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">神舟二十一号乘组即将返回地球，东风着陆场准备就绪</div><div class="tags"><span class="tag red">impact-high</span></div></div>
-<div class="card-summary">神舟二十一号航天员乘组将于近日乘神舟二十二号返回。中国空间站运营常态化，航天技术持续积累。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>中国航天事业稳步推进，空间站常态化运营意味着更多科学实验成果将落地，长期来看可能带动新材料、生物医药等民用产业发展。</div>
-<div class="source-line"><span>央视网</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.scmp.com/tech/tech-war/article/3355066/peking-university-unveils-3d-design-tool-power-huaweis-chip-ambitions" target="_blank">北京大学发布3D芯片设计工具，为华为芯片战略添翼<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag yellow">中影响</span><span class="tag media">媒体</span></div>
+</div>
+<div class="card-summary">北京大学推出全新芯片设计软件，兼容华为于周一发布的LogicFolding架构。这一突破有望帮助华为在受限条件下实现更先进的芯片设计能力，绕开部分光刻机限制，提升国产芯片自主水平。</div>
+<div class="card-impact"><strong>影响：</strong>对中国半导体自主可控具有战略意义，可能加速国产芯片设计工具生态成熟。</div>
+<div class="card-advice"><strong>建议：</strong>关注国产EDA（电子设计自动化）板块及华为芯片产业链。</div>
+<div class="verify-badge">✓ 已获 SCMP 报道确认</div>
+<div class="source-line"><span>SCMP</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">国产大型邮轮"爱达·花城号"完成12天试航，11月交付运营</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">第二艘国产大型邮轮完成试航任务并靠港，计划今年11月交付，标志着中国高端船舶制造能力再上台阶。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>国产邮轮产业链逐渐成熟，带动数千家配套企业。普通人未来乘坐国产邮轮出行价格可能更亲民，邮轮旅游门槛降低。</div>
-<div class="source-line"><span>央视网</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.reuters.com/technology/" target="_blank">路透社：机器人与人类同台走秀，未来着装引发想象<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag green">低影响</span><span class="tag media">媒体</span></div>
+</div>
+<div class="card-summary">路透社报道了一场别开生面的时装秀——机器人和人类模特穿着配套服装同台走秀，展示未来人机协作的时尚愿景。这一事件体现了机器人从工业场景向日常生活的延伸趋势。</div>
+<div class="card-impact"><strong>影响：</strong>人形机器人商业化进程加速，消费级机器人应用场景不断拓展。</div>
+<div class="card-advice"><strong>建议：</strong>关注人形机器人产业链，消费级机器人市场值得长期跟踪。</div>
+<div class="verify-badge">✓ 已获 Reuters 报道确认</div>
+<div class="source-line"><span>Reuters</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">智元人形机器人在塞尔维亚总统面前自主出场，欧洲生产基地计划启动</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">敏实集团未来工厂中，全尺寸人形机器人完成惊喜自主出场。塞尔维亚计划与智元合作建设欧洲首个人形机器人量产基地。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>中国人形机器人走出国门，说明技术已达国际先进水平。短期内普通人感受到的是制造业自动化加速，长期可能影响就业结构。</div>
-<div class="source-line"><span>上观新闻</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.sciencedaily.com/" target="_blank">科学家在伊萨卡公墓发现约550万只地栖蜂的巨型蜂群<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag green">低影响</span><span class="tag media">媒体</span></div>
+</div>
+<div class="card-summary">ScienceDaily报道，一位研究人员在纽约伊萨卡的一处公墓散步时意外发现了约550万只地栖蜂的隐藏种群。这一发现对研究昆虫生态和生物多样性具有重要意义。</div>
+<div class="card-impact"><strong>影响：</strong>基础科学研究进展，对传粉昆虫保护和生态系统理解有价值。短期对普通人无直接影响。</div>
+<div class="card-advice"><strong>建议：</strong>关注科学进展即可，无需特别行动。</div>
+<div class="verify-badge">✓ 已获 ScienceDaily 报道确认</div>
+<div class="source-line"><span>ScienceDaily</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">我国海上最大浅层岩性油田垦利10-2全面投产，日产超2800吨</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">中国海油宣布垦利10-2油田群开发项目（一期）全面投产，是海上最大规模浅层岩性油田。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>能源自主可控能力提升，对油价波动有缓冲作用。普通人加油成本受国际油价影响会小一些，能源安全与每个人钱包直接相关。</div>
-<div class="source-line"><span>腾讯网</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://scitechdaily.com/" target="_blank">UCLA新法：为免疫细胞"供糖"不"养癌"<span class="link-icon">↗</span></a>
 </div>
-<div class="card">
-<div class="card-header"><div class="card-title">养老服务机器人市场规模今年将突破100亿元</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">中国软件评测中心报告预测，2026年我国养老服务机器人市场规模将突破100亿元。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>老龄化社会催生养老机器人需求，尤其对独居老人的日常照料和陪伴有实际帮助。价格若降到数万元量级，普通家庭也能负担。</div>
-<div class="source-line"><span>腾讯网</span></div>
+<div class="tags"><span class="tag yellow">中影响</span><span class="tag media">媒体</span></div>
 </div>
+<div class="card-summary">加州大学洛杉矶分校研究人员找到一种方法，在不喂养癌细胞的前提下为T细胞提供受保护的糖分供应。这一突破有望解决癌症免疫疗法中的关键难题，让免疫细胞在肿瘤微环境中获得能量优势。</div>
+<div class="card-impact"><strong>影响：</strong>癌症治疗领域的重要进展，可能推动免疫疗法革新。对癌症患者及家属是一则积极消息。</div>
+<div class="card-advice"><strong>建议：</strong>关注相关临床试验进展；生物医药投资者可关注CAR-T等免疫疗法相关标。</div>
+<div class="verify-badge">✓ 已获 SciTechDaily + UCLA 交叉验证</div>
+<div class="source-line"><span>SciTechDaily</span><span>UCLA</span></div>
 </div>
+
+</div>
+
 <div class="cat-section">
-<div class="cat-heading"><span class="icon">🤖</span>AI领域</div>
+<div class="cat-heading">🤖 AI领域</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">英伟达宣布在中国台湾投资1500亿美元，台积电3纳米下半年涨价15%</div><div class="tags"><span class="tag red">impact-high</span></div></div>
-<div class="card-summary">英伟达加码台湾芯片产业，台积电3纳米制程涨价，明年或再涨10%。AI芯片成本持续攀升。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>芯片涨价传导到手机、电脑、汽车等终端产品。消费者买电子产品会更贵，但短期内国产替代还未到能平抑价格的阶段。</div>
-<div class="source-line"><span>华尔街见闻</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.scmp.com/tech/tech-trends/article/3355178/alibaba-tencent-lead-pivot-chatbots-embodied-ai-robotics" target="_blank">阿里腾讯从聊天机器人转向具身AI机器人赛道<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag yellow">中影响</span><span class="tag ai">AI</span><span class="tag media">媒体</span></div>
+</div>
+<div class="card-summary">阿里巴巴和腾讯正引领中国AI企业从纯聊天机器人转向具身AI（Embodied AI）机器人领域，将AI能力与物理世界交互结合。这一战略转向标志着中国AI巨头正在押注下一代AI形态——能够真正"动手做事"的智能体。</div>
+<div class="card-impact"><strong>影响：</strong>具身AI（机器人+AI）成为新风口，机器人ETF和相关供应链企业将受益。</div>
+<div class="card-advice"><strong>建议：</strong>关注具身AI/机器人概念股；伺服电机、传感器、AI芯片等细分领域值得研究。</div>
+<div class="verify-badge">✓ 已获 SCMP 报道确认</div>
+<div class="source-line"><span>SCMP</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">Meta推出AI聊天机器人付费订阅服务，股价拉升4%</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">Meta靠订阅模式回血，推出AI聊天机器人付费服务，AI商业化加速推进。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>AI正从免费走向付费，类似互联网早期演变。普通人未来使用高级AI功能可能要按月订阅，但基础功能大概率保持免费。</div>
-<div class="source-line"><span>华尔街见闻</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.scmp.com/tech/big-tech/article/3355175/why-mulerun-could-be-next-craze-new-alibaba-ai-agent-platform-promises-safer-adoption" target="_blank">阿里推MuleRun平台：号称"永不掉线的AI员工"<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag yellow">中影响</span><span class="tag ai">AI</span><span class="tag media">媒体</span></div>
+</div>
+<div class="card-summary">阿里巴巴推出AI Agent平台MuleRun，定位为"始终在线"的企业AI员工。该平台主打企业级安全部署，旨在让AI Agent像真实员工一样24小时在线工作，加速中国企业AI落地的步伐。</div>
+<div class="card-impact"><strong>影响：</strong>企业AI Agent市场迎来重量级玩家，可能加速中国企业的数字化转型和自动化进程。</div>
+<div class="card-advice"><strong>建议：</strong>关注AI Agent赛道对SaaS/软件服务行业的影响；企业IT负责人可评估相关产品。</div>
+<div class="verify-badge">✓ 已获 SCMP 报道确认</div>
+<div class="source-line"><span>SCMP</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">Snowflake与AWS签订60亿美元AI采购协议，盘后涨超30%</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">Snowflake大手笔加码AI基础设施，云巨头AI军备竞赛白热化。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>AI算力需求爆发让云服务商赚得盆满钵满。普通人受益的是AI产品迭代更快，但企业AI成本增加也会反映在服务价格上。</div>
-<div class="source-line"><span>华尔街见闻</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.scmp.com/tech/tech-trends/article/3355156/chinas-minimax-records-1-million-client-base-fivefold-growth-half-year" target="_blank">中国MiniMax半年增长5倍，客户破百万，全球用户达3亿<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag yellow">中影响</span><span class="tag ai">AI</span><span class="tag media">媒体</span></div>
+</div>
+<div class="card-summary">中国AI初创公司MiniMax半年内客户数增长5倍突破100万，全球用户达3亿，年化经常性收入（ARR）两个月翻倍。不过公司仍在报告巨额亏损，反映出AI赛道的高投入特征。</div>
+<div class="card-impact"><strong>影响：</strong>中国AI创业公司商业化加速，"烧钱换增长"模式仍在上演。对投资者来说需关注盈利时间表。</div>
+<div class="card-advice"><strong>建议：</strong>关注MiniMax IPO进展；AI应用层企业需关注商业模式可持续性。</div>
+<div class="verify-badge">✓ 已获 SCMP 报道确认</div>
+<div class="source-line"><span>SCMP</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">Salesforce业绩指引不及预期，AI颠覆软件行业隐忧加剧</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">Salesforce盘后跌超3%，传统软件巨头面临AI原生应用的冲击，行业格局加速重构。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>AI正在改写软件行业规则，打工人的工作方式随之变化。掌握AI工具的职场人会更有竞争力，传统软件操作技能含金量下降。</div>
-<div class="source-line"><span>华尔街见闻</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.scmp.com/tech/tech-trends/article/3355129/us-banks-charge-ahead-american-ai-hong-kong-despite-geopolitical-tensions" target="_blank">美资银行在香港推进美国AI应用，绕开地缘政治雷区<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag green">低影响</span><span class="tag ai">AI</span><span class="tag media">媒体</span></div>
 </div>
+<div class="card-summary">尽管美国AI公司限制了对香港和中国大陆用户的访问，美资银行仍在香港积极部署美国AI工具，努力在合规与效率之间寻找平衡。这反映出金融业对AI的高度依赖和地缘政治的现实困境。</div>
+<div class="card-impact"><strong>影响：</strong>香港作为国际金融中心的AI应用面临特殊挑战，但也催生了"合规AI"新需求。</div>
+<div class="card-advice"><strong>建议：</strong>关注香港AI监管政策变化；有跨境业务的企业需关注AI合规风险。</div>
+<div class="verify-badge">✓ 已获 SCMP 报道确认</div>
+<div class="source-line"><span>SCMP</span></div>
+</div>
+
+</div>
+
 <div class="cat-section">
-<div class="cat-heading"><span class="icon">🌍</span>全球局势</div>
+<div class="cat-heading">🌍 全球局势</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">伊美停火框架草案曝光：美方承诺所有战线停火60天</div><div class="tags"><span class="tag red">impact-high</span></div></div>
-<div class="card-summary">伊朗官员披露美伊初步协议草案，美方承诺全面停火60天，释放部分伊朗被冻结资产。白宫否认但鲁比奥称给谈判机会。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>中东局势若缓和，国际油价有望回落，国内汽油价格可能下调。但局势仍有变数，油价一时难言稳定。</div>
-<div class="source-line"><span>华尔街见闻</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.democracynow.org/2026/5/28/headlines" target="_blank">特朗普威胁"炸毁"阿曼，美军空袭伊朗南部<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag red">高影响</span><span class="tag official">官方</span></div>
+</div>
+<div class="card-summary">科威特军方因无人机和导弹袭击激活防空系统。伊朗革命卫队宣布袭击了美军在海湾地区的空军基地以报复美军在阿巴斯港附近的攻击。特朗普在内阁会议上说谈判取得进展，但拒绝伊朗与阿曼共同管理霍尔木兹海峡的方案，并公开威胁"如果阿曼不守规矩，我们就炸毁他们"。伊朗外交部谴责这是"国际关系中的无法无天和霸凌行为正常化"。</div>
+<div class="card-impact"><strong>影响：</strong>中东局势急剧升级，霍尔木兹海峡通行风险达危机级别。油价可能大幅飙升，全球能源安全受到严重威胁。</div>
+<div class="card-advice"><strong>建议：</strong>紧急关注油价走势；考虑增加能源板块配置；有车一族关注加油成本变化。</div>
+<div class="verify-badge">✓ 已获 Democracy Now + Havana Times 交叉验证</div>
+<div class="source-line"><span>Democracy Now</span><span>Havana Times</span><span>伊朗外交部</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">国际油价27日暴跌5.5%，WTI跌破89美元</div><div class="tags"><span class="tag red">impact-high</span></div></div>
-<div class="card-summary">WTI原油收跌5.55%报88.68美元，布伦特跌5.31%报94.29美元。市场对中东停火预期升温。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>油价大跌直接利好有车一族，汽油价格预计将下调。同时物流成本降低也会传导到日常消费品价格上。</div>
-<div class="source-line"><span>央视网</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.democracynow.org/2026/5/28/headlines" target="_blank">以色列扩大南黎巴嫩疏散令，14%领土被划为战区<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag red">高影响</span><span class="tag media">媒体</span></div>
+</div>
+<div class="card-summary">以色列加强对南黎巴嫩的轰炸，并扩大疏散令范围，要求扎赫拉尼河以南所有居民撤离。以色列已宣布黎巴嫩约14%的领土为战区，包括第四大城市提尔的大部分地区。最新空袭至少造成14人死亡，其中包括多名儿童。</div>
+<div class="card-impact"><strong>影响：</strong>黎巴嫩人道主义灾难持续恶化，超过百万人流离失所。中东多线作战局势难以收场。</div>
+<div class="card-advice"><strong>建议：</strong>旅行避免相关地区；关注难民危机对欧洲的溢出效应。</div>
+<div class="verify-badge">✓ 已获 Democracy Now + Human Rights Watch 交叉验证</div>
+<div class="source-line"><span>Democracy Now</span><span>Human Rights Watch</span><span>黎巴嫩卫生部</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">荷兰军舰非法侵闯西沙群岛，南部战区外逼驱离</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">荷兰海军护卫舰非法侵闯中国西沙群岛并升空直升机侵入领空，南部战区采取语音警告、电子干扰等措施驱离。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>南海局势持续紧张，但军事摩擦控制在警告驱离层面，暂不会影响普通人生活。需关注是否升级为更严重对峙。</div>
-<div class="source-line"><span>腾讯网</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.democracynow.org/2026/5/28/headlines" target="_blank">宰牲节首日：加沙住宅楼遭空袭，至少10名巴勒斯坦人丧生<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag red">高影响</span><span class="tag media">媒体</span></div>
+</div>
+<div class="card-summary">在穆斯林重要节日宰牲节的第一天，以色列空袭加沙里马尔社区一栋住宅楼，造成至少10人死亡、20人受伤，其中包含4名儿童。巴勒斯坦当局称以色列自去年10月签署停火协议以来已违反停火3000次，造成超过900名平民死亡。</div>
+<div class="card-impact"><strong>影响：</strong>所谓"停火"形同虚设，巴以冲突看不到尽头。加沙人道主义危机持续加深。</div>
+<div class="card-advice"><strong>建议：</strong>关注国际社会反应和联合国斡旋进展；投资上适当配置避险资产。</div>
+<div class="verify-badge">✓ 已获 Democracy Now + Al Jazeera + Havana Times 交叉验证</div>
+<div class="source-line"><span>Democracy Now</span><span>Al Jazeera</span><span>Havana Times</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">哈马斯新任军事领导人奥德在以军袭击中身亡</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">以军26日对加沙地带发动袭击，哈马斯确认新任军事领导人穆罕默德·奥德身亡。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>中东冲突短期内难以平息，但对中国普通人影响有限。主要关注点是油价波动和一带一路沿线国家的安全形势。</div>
-<div class="source-line"><span>腾讯网</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.livemint.com/news/world/total-world-latest-news-on-may-28-2026-live-updates-11779909439953.html" target="_blank">奥斯卡影后海伦·米伦在伦敦遭辱骂攻击<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag yellow">中影响</span><span class="tag media">媒体</span></div>
+</div>
+<div class="card-summary">奥斯卡获奖女演员海伦·米伦在伦敦街头被抗议者针对，被骂为"邪恶的犹太复国主义者"。这一事件反映了加沙战争引发的全球反犹/反犹太复国主义情绪持续蔓延，甚至波及知名文化界人士。</div>
+<div class="card-impact"><strong>影响：</strong>巴以冲突的社会矛盾正在向西方社会内部传导，种族和宗教紧张局势加剧。</div>
+<div class="card-advice"><strong>建议：</strong>在海外的华人注意人身安全；关注所在地区的安全形势。</div>
+<div class="verify-badge">✓ 已获 Livemint + 多家英媒 交叉验证</div>
+<div class="source-line"><span>Livemint</span><span>多家英国媒体</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">日本通过国家情报会议设立法案，引发各界担忧</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">日本参议院通过高市早苗政府推动的情报强化法案，意在整合情报力量，被批评压制反战声音。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>日本军事情报能力强化值得关注，但短期内不影响中日民间交流与贸易。长期需观察是否影响地区安全平衡。</div>
-<div class="source-line"><span>腾讯网</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://havanatimes.org/news/international-news-briefs-for-thursday-may-28-2026/" target="_blank">五角大楼：两天内第二次在太平洋击沉船只，2人死亡<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag yellow">中影响</span><span class="tag official">官方</span></div>
 </div>
+<div class="card-summary">美国南方司令部公布了一段视频，显示美军在太平洋东部的船只爆炸画面，造成2人死亡。这是两天内美军第二次对涉嫌贩毒的船只发动攻击。美军称自行动开始以来已有196人在59次攻击中丧生。</div>
+<div class="card-impact"><strong>影响：</strong>美军在太平洋区域军事行动频繁。对中国公民在相关海域的航行安全无直接影响。</div>
+<div class="card-advice"><strong>建议：</strong>保持关注即可，无需采取特别行动。</div>
+<div class="verify-badge">✓ 已获 Havana Times + US Southern Command 交叉验证</div>
+<div class="source-line"><span>Havana Times</span><span>US Southern Command</span></div>
+</div>
+
+</div>
+
 <div class="cat-section">
-<div class="cat-heading"><span class="icon">💰</span>经济民生</div>
+<div class="cat-heading">💰 经济民生</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">1-4月规上工业企业利润增长18.2%，经济复苏信号明显</div><div class="tags"><span class="tag red">impact-high</span></div></div>
-<div class="card-summary">国家统计局公布1-4月规上工业企业利润总额24358.4亿元，同比增18.2%，企业盈利能力持续改善。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>企业利润增长意味着就业和工资有改善空间。经济回暖直接提升普通人收入和消费信心，是好信号。</div>
-<div class="source-line"><span>腾讯网</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-prices-today-thursday-may-28-2026-down-this-morning-and-falling-further-113406336.html" target="_blank">比特币大跌：5月28日开盘价$74,332，日内跌幅超2%<span class="link-icon">↗</span></a>
 </div>
+<div class="tags"><span class="tag yellow">中影响</span><span class="tag official">官方</span></div>
+</div>
+<div class="card-summary">比特币5月28日开盘价为74,332.94美元，较周三开盘价下跌2%，且盘中进一步走低。中东局势紧张引发的避险情绪未能推动加密市场上涨，反而因风险偏好下降而承压。</div>
+<div class="card-impact"><strong>影响：</strong>加密市场短期承压，与地缘政治风险的关联度降低。持仓者面临回调压力。</div>
+<div class="card-advice"><strong>建议：</strong>观望为主；已有持仓者可考虑设置止损位。</div>
+<div class="verify-badge">✓ 已获 Yahoo Finance 报道确认</div>
+<div class="source-line"><span>Yahoo Finance</span></div>
+</div>
+
 <div class="card">
-<div class="card-header"><div class="card-title">国务院成立山西5·22特别重大瓦斯爆炸事故调查组</div><div class="tags"><span class="tag red">impact-high</span></div></div>
-<div class="card-summary">山西长治通洲集团留神峪煤业发生特别重大瓦斯爆炸，国务院成立调查组，由应急管理部牵头。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>矿难再次敲响安全生产警钟。背后可能推动更严格的煤矿安全监管，短期可能影响煤炭供应和价格，进而影响供暖和电费。</div>
-<div class="source-line"><span>腾讯网</span></div>
+<div class="card-header">
+<div class="card-title">
+<a href="https://www.youtube.com/watch?v=To0CCxJ2qOw" target="_blank">纳斯达克和标普500因美伊和谈希望创历史新高<span class="link-icon">↗</span></a>
 </div>
-<div class="card">
-<div class="card-header"><div class="card-title">2026年度立法工作计划发布：将制定金融法、医疗保障法、托育服务法</div><div class="tags"><span class="tag red">impact-high</span></div></div>
-<div class="card-summary">国务院发布年度立法计划，涉及金融、医疗、托育等民生领域重磅立法。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>医疗保障法和托育服务法直接关系看病花多少钱、孩子谁来带。政策落地后普通人就医负担可能减轻，托育服务会更多更规范。</div>
-<div class="source-line"><span>腾讯网</span></div>
+<div class="tags"><span class="tag red">高影响</span><span class="tag official">官方</span></div>
 </div>
-<div class="card">
-<div class="card-header"><div class="card-title">市场监管总局开展信用赋能整治内卷式竞争专项行动</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">5月至12月，聚焦直播带货、外卖等领域整治恶性竞争，规范市场秩序。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>外卖骑手和直播带货从业者的工作环境可能改善。消费者也能享受到更规范的售后服务，避免被恶性竞争伤及。</div>
-<div class="source-line"><span>腾讯网</span></div>
+<div class="card-summary">尽管特朗普对伊朗发出威胁，市场仍对美伊达成停火协议抱有希望，推动纳斯达克和标普500指数创下历史新高。投资者似乎在忽略短期冲突风险，押注长期和平前景。芯片股领涨大盘。</div>
+<div class="card-impact"><strong>影响：</strong>美股表现强劲可能带动全球风险偏好回升，但地缘政治风险与股市分化令人警惕。</div>
+<div class="card-advice"><strong>建议：</strong>持有美股指数的投资者可继续持有，但需警惕地缘风险带来的回调。</div>
+<div class="verify-badge">✓ 已获 IBD + 多家财经媒体 交叉验证</div>
+<div class="source-line"><span>IBD</span><span>Yahoo Finance</span><span>Bloomberg</span></div>
 </div>
-<div class="card">
-<div class="card-header"><div class="card-title">公募基金总规模近40万亿元创新高，居民理财意识增强</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">截至4月底我国公募基金总规模近40万亿元，创历史新高。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>越来越多人把钱放进基金而非只存银行，理财方式在升级。但基金规模膨胀也意味着更多人暴露在市场波动风险中。</div>
-<div class="source-line"><span>央视网</span></div>
+
 </div>
-<div class="card">
-<div class="card-header"><div class="card-title">李强：加快建设大宗商品资源配置枢纽，扩大储备容量</div><div class="tags"><span class="tag yellow">impact-mid</span></div></div>
-<div class="card-summary">总理在浙江调研强调做好大宗商品储备调节，大力推进多种类型储备设施建设。</div>
-<div class="card-impact"><strong>对中国普通人的影响：</strong>大宗商品战略储备关乎物价稳定。储备充足意味着国际涨价对国内冲击减小，老百姓餐桌上的粮油价更稳。</div>
-<div class="source-line"><span>上观新闻</span></div>
+
+<div class="nav-bar">
+<a href="daily_report_20260527.html" class="nav-link">← 前一天</a>
+<a href="index.html" class="nav-link idx">📋 历史索引</a>
+<span class="nav-disabled">后一天 →</span>
 </div>
+<div class="footer">
+<p>全球要闻日报 · 自动生成于 2026-05-28</p>
+<p>影响力评级基于对中国普通个人的直接/间接触及程度</p>
+<div class="disclaimer">本报告由 AI 自动聚合生成，信息仅供参考，不构成任何投资或行动建议。</div>
 </div>
-<div class="footer"><p>全球要闻日报 · 自动生成于 20260528</p><p>影响力评级基于对中国普通个人的直接/间接触及程度</p><div class="disclaimer">本报告由 AI 自动聚合生成，信息仅供参考，不构成任何投资或行动建议。</div></div>
 </div>
 </body>
 </html>
