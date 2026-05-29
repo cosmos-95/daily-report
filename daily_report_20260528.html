@@ -7,6 +7,72 @@
 <meta name="description" content="2026年5月28日全球要闻：特朗普威胁炸毁阿曼；以色列扩大黎巴嫩疏散令；加沙宰牲节遭空袭；北大为华为芯片设计工具；比特币下跌；纳斯达克创历史新高">
 <meta name="report-stats" content="high:6,mid:7,low:3">
 <meta name="report-source-count" string="false">14</meta>
+<style>
+:root {
+  --bg-top:#0F1520; --bg-mid:#0B0F1A; --bg-bottom:#0A0E17;
+  --card-bg:#111827; --card-border:rgba(255,255,255,0.06); --card-border-hover:rgba(255,255,255,0.10);
+  --text-primary:#E5E7EB; --text-secondary:#9CA3AF; --text-tertiary:#6B7280;
+  --accent-blue:#3B82F6; --accent-cyan:#14B8A6; --accent-green:#10B981; --accent-amber:#F59E0B; --accent-red:#EF4444;
+  --accent-purple:#A855F7; --source-green:#059669;
+  --bg-info:#1E3A8A; --bg-success:#064E3B; --bg-warning:#78350F; --bg-danger:#7F1D1D; --bg-purple:#4C1D95;
+  --radius-sm:6px; --radius-md:10px; --radius-lg:14px; --radius-full:999px;
+  --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --font-mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,"Noto Sans Mono SC",monospace;
+  --font-display:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg-top) 0%,var(--bg-mid) 50%,var(--bg-bottom) 100%);color:var(--text-primary);line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.container{max-width:780px;margin:0 auto;padding:48px 24px}
+.header{text-align:center;padding:20px 0 36px;margin-bottom:32px;border-bottom:1px solid var(--card-border)}
+.header h1{font-size:30px;font-weight:700;color:#FFF;margin-bottom:4px}
+.header .sub{font-size:13px;color:var(--text-secondary);font-weight:400;letter-spacing:.8px}
+.header .date-badge{display:inline-block;margin-top:18px;padding:6px 20px;background:rgba(30,58,138,.5);border:1px solid rgba(59,130,246,.3);border-radius:var(--radius-full);font-size:13px;font-weight:500;color:#FFF;font-family:var(--font-mono);letter-spacing:.5px}
+.stats-row{display:flex;gap:10px;margin-bottom:32px}
+.stat-card{flex:1;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md);padding:18px 12px;text-align:center;transition:box-shadow .2s,transform .2s,border-color .2s}
+.stat-card:hover{box-shadow:0 10px 15px -3px rgba(0,0,0,.5);transform:translateY(-1px);border-color:var(--card-border-hover)}
+.stat-card .num{font-family:var(--font-mono);font-size:28px;font-weight:600;margin-bottom:2px;line-height:1}
+.stat-card .label{font-size:11px;color:var(--text-secondary);font-weight:500;letter-spacing:.3px}
+.stat-card.red .num{color:var(--accent-red)}.stat-card.yellow .num{color:var(--accent-amber)}.stat-card.green .num{color:var(--accent-green)}.stat-card.purple .num{color:var(--accent-purple)}
+.cat-section{margin-bottom:36px}
+.cat-heading{font-size:17px;font-weight:700;color:#D1D5DB;padding:10px 0 10px 14px;border-left:3px solid var(--accent-cyan);border-bottom:1px solid var(--card-border);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md);padding:20px 22px;margin-bottom:14px;transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:var(--card-border-hover);box-shadow:0 10px 15px -3px rgba(0,0,0,.4)}
+.card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
+.card-title{font-size:15px;font-weight:600;line-height:1.5;color:#D1D5DB;flex:1;word-break:break-word}
+.card-title a{color:var(--accent-cyan);text-decoration:none;transition:color .15s}
+.card-title a:hover{color:#E5E7EB}
+.card-title .link-icon{display:inline-block;margin-left:3px;font-size:11px;opacity:0.5;vertical-align:super;transition:opacity .15s}
+.card-title a:hover .link-icon{opacity:1}
+.tags{display:flex;gap:5px;flex-shrink:0;flex-wrap:wrap;align-items:flex-start}
+.tag{font-size:11px;padding:2px 9px;border-radius:var(--radius-full);font-weight:500;letter-spacing:.2px;border:1px solid transparent;white-space:nowrap}
+.tag.red{background:var(--bg-danger);color:#F87171;border-color:#DC2626}
+.tag.yellow{background:var(--bg-warning);color:var(--accent-amber);border-color:#D97706}
+.tag.green{background:var(--bg-success);color:var(--accent-green);border-color:#059669}
+.tag.ai{background:var(--bg-info);color:var(--accent-blue);border-color:#2563EB}
+.tag.official{background:rgba(59,130,246,.15);color:var(--accent-blue);border-color:rgba(59,130,246,.3)}
+.tag.media{background:rgba(16,185,129,.15);color:var(--accent-green);border-color:rgba(16,185,129,.3)}
+.card-summary{font-size:14px;color:#D1D5DB;margin-bottom:12px;line-height:1.7}
+.card-impact{background:#1E293B;border-radius:var(--radius-sm);padding:14px 18px 12px;font-size:14px;color:#E2E8F0;border-left:3px solid var(--accent-cyan);position:relative}
+.card-impact strong{color:#A7F3D0;font-weight:600}
+.card-advice{margin-top:8px;padding-top:8px;border-top:1px dashed rgba(255,255,255,.08);color:#E2E8F0}
+.card-advice strong{color:#FCD34D!important}
+.verify-badge{display:inline-block;margin:10px 0 0 16px;padding:3px 10px;border-radius:var(--radius-full);font-size:11px;font-weight:500;background:rgba(16,185,129,.08);color:#6EE7B7;border:1px solid rgba(16,185,129,.25)}
+.verify-badge.verify-warn{background:rgba(245,158,11,.08);color:#FBBF24;border-color:rgba(245,158,11,.25)}
+.source-line{margin-top:14px;font-size:11px;display:flex;gap:8px;flex-wrap:wrap}
+.source-line span{padding:2px 10px;color:var(--source-green);border:1px solid rgba(5,150,105,.2);border-radius:var(--radius-sm);font-family:var(--font-mono);font-size:10px;transition:border-color .2s}
+.source-line span:hover{border-color:var(--source-green)}
+.nav-bar{display:flex;justify-content:space-between;align-items:center;margin:32px 0 28px;padding:14px 18px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md)}
+.nav-link{font-size:13px;color:var(--accent-cyan);text-decoration:none;transition:color .15s}
+.nav-link:hover{color:#6EE7B7;text-decoration:underline}
+.nav-link.idx{color:var(--text-secondary)}
+.nav-link.idx:hover{color:var(--text-primary)}
+.nav-disabled{font-size:13px;color:var(--text-tertiary);opacity:0.5}
+.footer{text-align:center;padding:28px 0;margin-top:8px;border-top:1px solid var(--card-border);font-size:12px;color:var(--text-tertiary)}
+.footer p{margin:4px 0;line-height:1.5}
+.footer .disclaimer{margin-top:12px;padding:10px 18px;background:rgba(255,255,255,.03);border-radius:var(--radius-sm);font-size:11px;color:var(--text-tertiary);border:1px solid var(--card-border)}
+@media(max-width:640px){.container{padding:32px 16px}.stats-row{gap:6px}.stat-card{padding:12px 8px}.stat-card .num{font-size:22px}.card{padding:16px 18px}.card-header{flex-direction:column;gap:8px}.header h1{font-size:24px}.cat-heading{padding-left:10px;border-left-width:2px}.nav-bar{flex-direction:column;gap:8px;text-align:center}}
+@media(max-width:480px){.container{padding:24px 12px}.stats-row{gap:4px}.stat-card{padding:10px 6px}.stat-card .num{font-size:19px}.header h1{font-size:20px}}
+</style>
 </head>
 <body>
 <div class="container">
