@@ -55,7 +55,6 @@ body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg-top
 .report-card:hover{border-color:var(--card-border-hover);box-shadow:0 10px 15px -3px rgba(0,0,0,.4)}
 .report-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
 .report-date{font-size:15px;font-weight:600;color:var(--accent-cyan)}
-.report-tag{font-size:11px;padding:3px 10px;border-radius:var(--radius-full);font-weight:500;background:rgba(30,58,138,.5);color:#93C5FD;border:1px solid rgba(59,130,246,.3)}
 .report-summary{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px}
 .report-meta{display:flex;gap:14px;font-size:11px;color:var(--text-tertiary);flex-wrap:wrap}
 .report-meta span{display:flex;align-items:center;gap:4px}
@@ -144,14 +143,13 @@ function renderReports(filter) {
   var f = reports.slice();
   if (filter === 'week') f = reports.slice(0, Math.min(7, reports.length));
   else if (filter === 'month') f = reports.slice(0, Math.min(30, reports.length));
-  else if (filter === 'ai') f = reports.filter(function(r) { return r.tags.indexOf('ai') >= 0; });
+  else if (filter === 'ai') f = reports.filter(function(r) { return r.tags && r.tags.indexOf('ai') >= 0; });
   document.getElementById('report-list').innerHTML = f.map(function(r) {
-    var tag = r.tags.indexOf('ai') >= 0 ? 'AI\u4e13\u9898' : '\u7efc\u5408';
-    var sc = r.sourceCount !== undefined ? '<span>\U0001F4E1 \u4fe1\u6e90: ' + r.sourceCount + '</span>' : '';
+    var sc = r.sourceCount !== undefined ? '<span>\u4fe1\u6e90: ' + r.sourceCount + '</span>' : '';
     return '<a href="' + r.filename + '" class="report-card">' +
-      '<div class="report-header"><div class="report-date">' + r.date + ' \u00b7 \u5468' + r.weekday + '</div><div class="report-tag">' + tag + '</div></div>' +
+      '<div class="report-header"><div class="report-date">' + r.date + ' \u00b7 \u5468' + r.weekday + '</div></div>' +
       '<div class="report-summary">' + r.summary + '</div>' +
-      '<div class="report-meta"><span>\U0001F534 \u9ad8: ' + r.highCount + '</span><span>\U0001F7E1 \u4e2d: ' + r.midCount + '</span><span>\U0001F7E2 \u4f4e: ' + r.lowCount + '</span>' + sc + '</div></a>';
+      '<div class="report-meta"><span>\u9ad8: ' + r.highCount + '</span><span>\u4e2d: ' + r.midCount + '</span><span>\u4f4e: ' + r.lowCount + '</span>' + sc + '</div></a>';
   }).join('');
 }
 
