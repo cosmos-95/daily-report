@@ -147,7 +147,7 @@ function renderReports(filter) {
   document.getElementById('report-list').innerHTML = f.map(function(r) {
     var sc = r.sourceCount !== undefined ? '<span>\u4fe1\u6e90: ' + r.sourceCount + '</span>' : '';
     return '<a href="' + r.filename + '" class="report-card">' +
-      '<div class="report-header"><div class="report-date">' + r.date + ' \u00b7 \u5468' + r.weekday + '</div></div>' +
+      '<div class="report-header"><div class="report-date">' + r.date + ' \u00b7 ' + r.weekday + '</div></div>' +
       '<div class="report-summary">' + r.summary + '</div>' +
       '<div class="report-meta"><span>\u9ad8: ' + r.highCount + '</span><span>\u4e2d: ' + r.midCount + '</span><span>\u4f4e: ' + r.lowCount + '</span>' + sc + '</div></a>';
   }).join('');
