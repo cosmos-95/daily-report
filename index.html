@@ -74,6 +74,21 @@ body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg-top
   .header h1{font-size:20px}
   .stat-card .num{font-size:20px}
 }
+/* ── Back to Top ── */
+#back-to-top{
+  position:fixed;bottom:32px;right:28px;z-index:999;
+  width:44px;height:44px;border-radius:var(--radius-full);
+  background:rgba(20,184,166,.85);border:1px solid rgba(20,184,166,.4);
+  color:#FFF;font-size:20px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .3s,box-shadow .3s;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  user-select:none;
+}
+#back-to-top.show{opacity:1;visibility:visible}
+#back-to-top:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(20,184,166,.3);background:rgba(20,184,166,1)}
+#back-to-top:active{transform:translateY(-1px)}
+@media(max-width:640px){#back-to-top{bottom:20px;right:16px;width:38px;height:38px;font-size:17px}}
 </style>
 </head>
 <body>
@@ -107,7 +122,14 @@ body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg-top
     <div class="disclaimer">本报告由 AI 自动聚合生成，信息仅供参考，不构成任何投资或行动建议。</div>
   </div>
 </div>
+
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部">↑</button>
+
 <script>
+(function(){var b=document.getElementById('back-to-top');if(!b)return;
+function t(){b.classList.toggle('show',window.scrollY>400)}
+window.addEventListener('scroll',t,{passive:true});t()})()
+
 const reports = [{date:"2026年05月30日",weekday:"周六",filename:"daily_report_20260530.html",summary:"中东冲突冲击全球经济、AI模型竞赛白热化、以色列控制加沙70%、WEF经济学家警告全球经济恶化",highCount:5,midCount:7,lowCount:1,tags:["ai"],sourceCount:8}, {date:"2026年05月29日",weekday:"周五",filename:"daily_report_20260529.html",summary:"伊朗战争霍尔木兹海峡关闭致油价破$120；Google I/O发布Gemini Spark个人AI智能体；普京习近平会晤深化欧亚战略协作；欧盟罚Temu €2亿",highCount:9,midCount:10,lowCount:1,tags:["ai"],sourceCount:12}, {date:"2026年05月28日",weekday:"周四",filename:"daily_report_20260528.html",summary:"2026年5月28日全球要闻日报：比亚迪发布4nm智驾芯片、SpaceX火星飞行宣布、荷兰侵权舰机驱离、河南13死追尾、城市更新十五五规划",highCount:7,midCount:5,lowCount:2,tags:["ai"],sourceCount:18}, {date:"2026年05月27日",weekday:"周三",filename:"daily_report_20260527.html",summary:"2026年5月27日全球要闻日报：荷兰侵闯西沙被驱离、法拉利电动车股价暴跌、极端降雨致重大伤亡、欧盟拟推产能过剩工具",highCount:6,midCount:5,lowCount:0,tags:["ai"],sourceCount:20}];
 const WEEKDAYS = ['\u65e5','\u4e00','\u4e8c','\u4e09','\u56db','\u4e94','\u516d'];
 
