@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全球要闻日报 | 2026年5月30日</title>
+<title>全球要闻日报 | 2026-05-30</title>
 <meta name="description" content="神舟二十三号3.5小时极速对接创纪录；极端热浪席卷全球WHO警报；中芯国际市值突破1.25万亿；中国暂停部分稀土对日出口">
-<meta name="report-stats" content="high:8,mid:11,low:1">
-<meta name="report-source-count" content="12">
+<meta name="report-stats" content="high:6,mid:8,low:3">
+<meta name="report-source-count" content="14">
 <style>
 :root {
   --bg-top:#0F1520; --bg-mid:#0B0F1A; --bg-bottom:#0A0E17;
@@ -70,8 +70,22 @@ body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg-top
 .footer{text-align:center;padding:28px 0;margin-top:8px;border-top:1px solid var(--card-border);font-size:12px;color:var(--text-tertiary)}
 .footer p{margin:4px 0;line-height:1.5}
 .footer .disclaimer{margin-top:12px;padding:10px 18px;background:rgba(255,255,255,.03);border-radius:var(--radius-sm);font-size:11px;color:var(--text-tertiary);border:1px solid var(--card-border)}
-@media(max-width:640px){.container{padding:32px 16px}.stats-row{gap:6px}.stat-card{padding:12px 8px}.stat-card .num{font-size:22px}.card{padding:16px 18px}.card-header{flex-direction:column;gap:8px}.header h1{font-size:24px}.cat-heading{padding-left:10px;border-left-width:2px}.nav-bar{flex-direction:column;gap:8px;text-align:center}}
-@media(max-width:480px){.container{padding:24px 12px}.stats-row{gap:4px}.stat-card{padding:10px 6px}.stat-card .num{font-size:19px}.header h1{font-size:20px}}
+
+/* ── Back to Top ── */
+#back-to-top{
+  position:fixed;bottom:32px;right:28px;z-index:999;
+  width:44px;height:44px;border-radius:var(--radius-full);
+  background:rgba(20,184,166,.85);border:1px solid rgba(20,184,166,.4);
+  color:#FFF;font-size:20px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .3s,box-shadow .3s;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  user-select:none;
+}
+#back-to-top.show{opacity:1;visibility:visible}
+#back-to-top:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(20,184,166,.3);background:rgba(20,184,166,1)}
+#back-to-top:active{transform:translateY(-1px)}
+@media(max-width:640px){#back-to-top{bottom:20px;right:16px;width:38px;height:38px;font-size:17px}}
 </style>
 </head>
 <body>
@@ -82,7 +96,11 @@ body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg-top
 <div class="date-badge">2026年5月30日·周六</div>
 </div>
 <div class="stats-row">
-<div class="stat-card red"><div class="num">8</div><div class="label">高影响力</div></div>
+<div class="stat-card red"><div class="num">6</div><div class="label">高影响力</div></div>
+<div class="stat-card yellow"><div class="num">8</div><div class="label">中影响力</div></div>
+<div class="stat-card green"><div class="num">3</div><div class="label">低影响力</div></div>
+<div class="stat-card purple"><div class="num">14</div><div class="label">信源数</div></div>
+</div>
 <div class="stat-card yellow"><div class="num">11</div><div class="label">中影响力</div></div>
 <div class="stat-card green"><div class="num">1</div><div class="label">低影响力</div></div>
 <div class="stat-card purple"><div class="num">14</div><div class="label">信源数</div></div>
@@ -391,17 +409,24 @@ body{font-family:var(--font-body);background:linear-gradient(180deg,var(--bg-top
 <div class="source-line"><span>国家发改委</span><span>新华网</span></div>
 </div>
 </div>
-
 <div class="nav-bar">
 <a href="daily_report_20260529.html" class="nav-link">← 5月29日·周五</a>
 <a href="index.html" class="nav-link idx">📋 历史索引</a>
 <span class="nav-disabled">无</span>
 </div>
 <div class="footer">
-<p>全球要闻日报 · 自动生成于 2026年5月30日</p>
+<p>全球要闻日报 · 自动生成于 2026-05-30</p>
 <p>影响力评级基于对中国普通个人的直接/间接触及程度</p>
 <div class="disclaimer">本报告由 AI 自动聚合生成，信息仅供参考，不构成任何投资或行动建议。</div>
 </div>
 </div>
+
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){var b=document.getElementById('back-to-top');if(!b)return;
+function t(){b.classList.toggle('show',window.scrollY>400)}
+window.addEventListener('scroll',t,{passive:true});t()})()
+</script>
 </body>
 </html>
