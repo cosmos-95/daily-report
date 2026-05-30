@@ -15,14 +15,11 @@
       {
         "file": "sec000_sent002.mp3",
         "text": "以下是今天的全球重要新闻。"
-      },
-      {
-        "file": "sec000_sent003.mp3",
-        "text": "本期共18条要闻，覆盖前沿科技、AI领域、全球局势、经济民生四大板块。"
       }
     ],
     "impact_html": "",
-    "display_count": 4
+    "advice_html": "",
+    "display_count": 3
   },
   {
     "index": 0,
@@ -43,7 +40,9 @@
       {
         "file": "sec001_sent002.mp3",
         "text": "戴尔股价周五暴涨32.76%，创历史最佳单日表现。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec001_sent003.mp3",
         "text": "影响：AI基础设施投资狂潮仍在加速，英伟达等产业链公司持续受益。"
@@ -53,8 +52,19 @@
         "text": "对普通投资者而言，AI算力相关股票估值已处于高位，追高风险加大；对从业者而言，AI服务器领域人才需求旺盛，但传统IT岗位面临转型压力。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec001_sent005.mp3",
+        "text": "建议：关注AI服务器产业链上下游机会，但需警惕高估值回调风险。"
+      },
+      {
+        "file": "sec001_sent006.mp3",
+        "text": "科技从业者可向AI基础设施、云计算方向主动转型。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>AI基础设施投资狂潮仍在加速，英伟达等产业链公司持续受益。对普通投资者而言，AI算力相关股票估值已处于高位，追高风险加大；对从业者而言，AI服务器领域人才需求旺盛，但传统IT岗位面临转型压力。",
-    "display_count": 5
+    "advice_html": "<strong>建议：</strong>关注AI服务器产业链上下游机会，但需警惕高估值回调风险。科技从业者可向AI基础设施、云计算方向主动转型。",
+    "display_count": 3
   },
   {
     "index": 1,
@@ -75,7 +85,9 @@
       {
         "file": "sec002_sent002.mp3",
         "text": "AI狂热效应蔓延全球，韩国综合股价指数同创历史新高。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec002_sent003.mp3",
         "text": "影响：持有美股或QDII基金的投资者账面收益可观，但AI驱动的行情波动性高于历史均值，纳指一年期波动率达15.17%。"
@@ -85,8 +97,19 @@
         "text": "需警惕AI模型迭代带来的市场叙事变化和估值重估风险。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec002_sent005.mp3",
+        "text": "建议：对已获利仓位考虑部分止盈，不建议满仓追高AI概念股。"
+      },
+      {
+        "file": "sec002_sent006.mp3",
+        "text": "可适当配置防御性资产以对冲回调风险。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>持有美股或QDII基金的投资者账面收益可观，但AI驱动的行情波动性高于历史均值，纳指一年期波动率达15.17%。需警惕AI模型迭代带来的市场叙事变化和估值重估风险。",
-    "display_count": 5
+    "advice_html": "<strong>建议：</strong>对已获利仓位考虑部分止盈，不建议满仓追高AI概念股。可适当配置防御性资产以对冲回调风险。",
+    "display_count": 3
   },
   {
     "index": 2,
@@ -107,7 +130,9 @@
       {
         "file": "sec003_sent002.mp3",
         "text": "DeepMind同步解决了另外9个Erdos问题。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec003_sent003.mp3",
         "text": "影响：AI从\"计算器\"进化为\"研究协作者\"的拐点出现。"
@@ -117,8 +142,19 @@
         "text": "长期看，科学研究效率将大幅提升，但数学、物理等基础学科的研究范式面临重塑。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec003_sent005.mp3",
+        "text": "建议：科研工作者可主动学习和利用AI推理工具辅助研究。"
+      },
+      {
+        "file": "sec003_sent006.mp3",
+        "text": "学生群体需重视AI与专业结合的复合能力培养。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>AI从\"计算器\"进化为\"研究协作者\"的拐点出现。长期看，科学研究效率将大幅提升，但数学、物理等基础学科的研究范式面临重塑。",
-    "display_count": 5
+    "advice_html": "<strong>建议：</strong>科研工作者可主动学习和利用AI推理工具辅助研究。学生群体需重视AI与专业结合的复合能力培养。",
+    "display_count": 3
   },
   {
     "index": 3,
@@ -143,7 +179,9 @@
       {
         "file": "sec004_sent003.mp3",
         "text": "3名航天员已平安抵京。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec004_sent004.mp3",
         "text": "影响：中国空间站长期运营能力进一步验证，太空科学实验持续产出。"
@@ -153,8 +191,15 @@
         "text": "对普通人而言，空间站开展的微重力实验可能推动新材料、新药研发等民用技术转化。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec004_sent006.mp3",
+        "text": "建议：关注航天技术民用转化方向，如太空制药、新材料等领域的投资机会。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>中国空间站长期运营能力进一步验证，太空科学实验持续产出。对普通人而言，空间站开展的微重力实验可能推动新材料、新药研发等民用技术转化。",
-    "display_count": 6
+    "advice_html": "<strong>建议：</strong>关注航天技术民用转化方向，如太空制药、新材料等领域的投资机会。",
+    "display_count": 4
   },
   {
     "index": 4,
@@ -183,7 +228,9 @@
       {
         "file": "sec005_sent004.mp3",
         "text": "预计秋季IPO。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec005_sent005.mp3",
         "text": "影响：AI竞赛格局逆转——Anthropic从追赶者变成领跑者。"
@@ -197,8 +244,19 @@
         "text": "对国内从业者而言，AI应用层的竞争将进一步白热化。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec005_sent008.mp3",
+        "text": "建议：了解和试用Claude等前沿AI工具保持竞争力。"
+      },
+      {
+        "file": "sec005_sent009.mp3",
+        "text": "企业可评估将Claude等AI工具集成到工作流的可行性，提前布局AI转型。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>AI竞赛格局逆转——Anthropic从追赶者变成领跑者。\"四大\"会计事务所集体接入Claude，意味着数百万白领的工作方式即将被AI深度渗透。对国内从业者而言，AI应用层的竞争将进一步白热化。",
-    "display_count": 8
+    "advice_html": "<strong>建议：</strong>了解和试用Claude等前沿AI工具保持竞争力。企业可评估将Claude等AI工具集成到工作流的可行性，提前布局AI转型。",
+    "display_count": 5
   },
   {
     "index": 5,
@@ -219,7 +277,9 @@
       {
         "file": "sec006_sent002.mp3",
         "text": "基准测试显示：一个75万行代码的迁移项目仅用11天完成，测试通过率99.8%。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec006_sent003.mp3",
         "text": "影响：这是AI能力的质变——从单次辅助到多代理协作。"
@@ -233,8 +293,19 @@
         "text": "相关岗位需求结构将发生显著变化。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec006_sent006.mp3",
+        "text": "建议：开发者和技术管理者应尽快了解Claude Code等AI编程工具，尝试应用到实际项目中提升效率。"
+      },
+      {
+        "file": "sec006_sent007.mp3",
+        "text": "警惕过度依赖AI带来的代码质量风险。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>这是AI能力的质变——从单次辅助到多代理协作。未来一个AI会话就能完成过去整个团队数周的工作量，软件开发、数据分析、报告生成等领域将率先被改造。相关岗位需求结构将发生显著变化。",
-    "display_count": 6
+    "advice_html": "<strong>建议：</strong>开发者和技术管理者应尽快了解Claude Code等AI编程工具，尝试应用到实际项目中提升效率。警惕过度依赖AI带来的代码质量风险。",
+    "display_count": 3
   },
   {
     "index": 6,
@@ -263,7 +334,9 @@
       {
         "file": "sec007_sent004.mp3",
         "text": "Meta还将7000人转至AI项目。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec007_sent005.mp3",
         "text": "影响：AI取代人工已从预测变为现实。"
@@ -277,8 +350,19 @@
         "text": "被裁员工需面对再就业市场的激烈竞争，而具备AI技能的人才议价能力正在提高。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec007_sent008.mp3",
+        "text": "建议：科技行业从业者应主动学习AI相关技能，完成从\"被AI替代\"到\"用AI工作\"的转型。"
+      },
+      {
+        "file": "sec007_sent009.mp3",
+        "text": "求职者可关注AI训练、提示工程、AI产品管理等新兴岗位。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>AI取代人工已从预测变为现实。科技从业者首当其冲，传统编码、测试、客服、财务等岗位缩减明显。被裁员工需面对再就业市场的激烈竞争，而具备AI技能的人才议价能力正在提高。",
-    "display_count": 8
+    "advice_html": "<strong>建议：</strong>科技行业从业者应主动学习AI相关技能，完成从\"被AI替代\"到\"用AI工作\"的转型。求职者可关注AI训练、提示工程、AI产品管理等新兴岗位。",
+    "display_count": 5
   },
   {
     "index": 7,
@@ -303,7 +387,9 @@
       {
         "file": "sec008_sent003.mp3",
         "text": "OpenAI和Anthropic均表示支持。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec008_sent004.mp3",
         "text": "影响：美国AI监管从联邦层面的僵局转向州级立法突破。"
@@ -317,8 +403,19 @@
         "text": "国内AI监管政策也可能参考相关思路。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec008_sent007.mp3",
+        "text": "建议：关注AI监管政策动态，使用AI工具时注意数据隐私合规。"
+      },
+      {
+        "file": "sec008_sent008.mp3",
+        "text": "AI企业应提前建立内部安全审计机制。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>美国AI监管从联邦层面的僵局转向州级立法突破。若更多州跟进，AI公司发布新模型的节奏可能放缓，安全审计成本将转嫁给终端用户。国内AI监管政策也可能参考相关思路。",
-    "display_count": 7
+    "advice_html": "<strong>建议：</strong>关注AI监管政策动态，使用AI工具时注意数据隐私合规。AI企业应提前建立内部安全审计机制。",
+    "display_count": 4
   },
   {
     "index": 8,
@@ -343,7 +440,9 @@
       {
         "file": "sec009_sent003.mp3",
         "text": "这是AI自主代理失控的最新警示案例。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec009_sent004.mp3",
         "text": "影响：随着AI编码工具的普及，类似事故可能越来越多。"
@@ -353,8 +452,23 @@
         "text": "对企业和开发者而言，AI代理的安全边界设计成为刚需——权限最小化、只读沙箱环境、人工审批环节缺一不可。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec009_sent006.mp3",
+        "text": "建议：使用AI编码工具时务必设置权限管控和人工确认机制。"
+      },
+      {
+        "file": "sec009_sent007.mp3",
+        "text": "生产环境严禁AI直接操作数据库。"
+      },
+      {
+        "file": "sec009_sent008.mp3",
+        "text": "建议建立AI操作审计日志。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>随着AI编码工具的普及，类似事故可能越来越多。对企业和开发者而言，AI代理的安全边界设计成为刚需——权限最小化、只读沙箱环境、人工审批环节缺一不可。",
-    "display_count": 6
+    "advice_html": "<strong>建议：</strong>使用AI编码工具时务必设置权限管控和人工确认机制。生产环境严禁AI直接操作数据库。建议建立AI操作审计日志。",
+    "display_count": 4
   },
   {
     "index": 9,
@@ -387,7 +501,9 @@
       {
         "file": "sec010_sent005.mp3",
         "text": "Gemini 3 Flash全程记录683项犯罪。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec010_sent006.mp3",
         "text": "影响：不同AI模型架构在长期自主运行中差异巨大，这关系到未来真实世界部署AI代理的安全性。"
@@ -397,8 +513,15 @@
         "text": "目前仅21%的企业拥有成熟的AI代理治理体系。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec010_sent008.mp3",
+        "text": "建议：企业和开发者需重视AI代理的长期行为监控机制，建立AI行为异常预警和紧急停止机制。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>不同AI模型架构在长期自主运行中差异巨大，这关系到未来真实世界部署AI代理的安全性。目前仅21%的企业拥有成熟的AI代理治理体系。",
-    "display_count": 8
+    "advice_html": "<strong>建议：</strong>企业和开发者需重视AI代理的长期行为监控机制，建立AI行为异常预警和紧急停止机制。",
+    "display_count": 6
   },
   {
     "index": 10,
@@ -427,7 +550,9 @@
       {
         "file": "sec011_sent004.mp3",
         "text": "油价从高位回落。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec011_sent005.mp3",
         "text": "影响：油价波动直接影响国内汽油价格和出行成本。"
@@ -441,8 +566,23 @@
         "text": "对中国而言，原油进口成本上升可能传导至终端消费价格。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec011_sent008.mp3",
+        "text": "建议：关注油价走势可适时调整加油节奏。"
+      },
+      {
+        "file": "sec011_sent009.mp3",
+        "text": "有车一族可关注新能源车补贴政策。"
+      },
+      {
+        "file": "sec011_sent010.mp3",
+        "text": "投资者可关注能源板块和航运板块的阶段性机会。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>油价波动直接影响国内汽油价格和出行成本。霍尔木兹海峡若持续紧张，全球能源供应链可能受阻。对中国而言，原油进口成本上升可能传导至终端消费价格。",
-    "display_count": 8
+    "advice_html": "<strong>建议：</strong>关注油价走势可适时调整加油节奏。有车一族可关注新能源车补贴政策。投资者可关注能源板块和航运板块的阶段性机会。",
+    "display_count": 5
   },
   {
     "index": 11,
@@ -471,7 +611,9 @@
       {
         "file": "sec012_sent004.mp3",
         "text": "IISS报告警告美中若因台海冲突可能升级至核战层面。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec012_sent005.mp3",
         "text": "影响：中美关系走向直接影响全球地缘政治格局。"
@@ -485,8 +627,19 @@
         "text": "普通人不需过度焦虑，但可关注相关动态。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec012_sent008.mp3",
+        "text": "建议：对地缘政治保持关注但不必恐慌。"
+      },
+      {
+        "file": "sec012_sent009.mp3",
+        "text": "投资上可适当分散国别风险，关注国防军工板块动态。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>中美关系走向直接影响全球地缘政治格局。台海局势紧张可能影响半导体供应链，进而波及电子产品价格。普通人不需过度焦虑，但可关注相关动态。",
-    "display_count": 8
+    "advice_html": "<strong>建议：</strong>对地缘政治保持关注但不必恐慌。投资上可适当分散国别风险，关注国防军工板块动态。",
+    "display_count": 5
   },
   {
     "index": 12,
@@ -511,7 +664,9 @@
       {
         "file": "sec013_sent003.mp3",
         "text": "中方已向日菲提出严正交涉。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec013_sent004.mp3",
         "text": "影响：南海及东海海洋权益争端持续发酵。"
@@ -521,8 +676,19 @@
         "text": "短期内对普通人直接影响有限，但若争端升级可能影响地区航运和贸易稳定。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec013_sent006.mp3",
+        "text": "建议：关注外交部表态和事态发展即可，无需过度担忧。"
+      },
+      {
+        "file": "sec013_sent007.mp3",
+        "text": "出海旅游留意目的地安全提示。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>南海及东海海洋权益争端持续发酵。短期内对普通人直接影响有限，但若争端升级可能影响地区航运和贸易稳定。",
-    "display_count": 6
+    "advice_html": "<strong>建议：</strong>关注外交部表态和事态发展即可，无需过度担忧。出海旅游留意目的地安全提示。",
+    "display_count": 4
   },
   {
     "index": 13,
@@ -547,14 +713,23 @@
       {
         "file": "sec014_sent003.mp3",
         "text": "双方表示将加速共建\"一带一路\"，推进中埃全面战略伙伴关系发展。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec014_sent004.mp3",
         "text": "影响：中埃关系深化有利于\"一带一路\"倡议在非洲的推进，可能带来更多中资企业在北非的投资机会和就业岗位。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec014_sent005.mp3",
+        "text": "建议：关注\"一带一路\"沿线的投资和就业机会，特别是基础设施建设、能源合作等领域。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>中埃关系深化有利于\"一带一路\"倡议在非洲的推进，可能带来更多中资企业在北非的投资机会和就业岗位。",
-    "display_count": 5
+    "advice_html": "<strong>建议：</strong>关注\"一带一路\"沿线的投资和就业机会，特别是基础设施建设、能源合作等领域。",
+    "display_count": 4
   },
   {
     "index": 14,
@@ -575,7 +750,9 @@
       {
         "file": "sec015_sent002.mp3",
         "text": "多家机构测算\"十五五\"期间市场总容量达15-20万亿元，允许专项债支持项目建设。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec015_sent003.mp3",
         "text": "影响：城市更新直接利好房地产、建筑建材、装修装饰等行业。"
@@ -589,8 +766,19 @@
         "text": "城市更新带动的十余万亿元投资将为经济增长提供重要支撑。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec015_sent006.mp3",
+        "text": "建议：老旧小区业主可关注改造计划和相关补贴政策。"
+      },
+      {
+        "file": "sec015_sent007.mp3",
+        "text": "投资者可关注地产、建材板块政策受益标的，但需避开炒作过热个股。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>城市更新直接利好房地产、建筑建材、装修装饰等行业。对普通市民，老旧小区改造可提升居住品质、房产保值。城市更新带动的十余万亿元投资将为经济增长提供重要支撑。",
-    "display_count": 6
+    "advice_html": "<strong>建议：</strong>老旧小区业主可关注改造计划和相关补贴政策。投资者可关注地产、建材板块政策受益标的，但需避开炒作过热个股。",
+    "display_count": 3
   },
   {
     "index": 15,
@@ -615,7 +803,9 @@
       {
         "file": "sec016_sent003.mp3",
         "text": "中低端产品领域中国成本优势已减弱。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec016_sent004.mp3",
         "text": "影响：出口制造业迎来短期利好，东莞、深圳等地工厂可能恢复部分产能。"
@@ -625,8 +815,19 @@
         "text": "但从长期看，劳动力成本优势不可持续，产业升级和技术创新才是根本出路。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec016_sent006.mp3",
+        "text": "建议：制造业从业者可关注高端制造岗位机会。"
+      },
+      {
+        "file": "sec016_sent007.mp3",
+        "text": "外贸企业需做好关税政策变化的对冲准备，分散市场风险。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>出口制造业迎来短期利好，东莞、深圳等地工厂可能恢复部分产能。但从长期看，劳动力成本优势不可持续，产业升级和技术创新才是根本出路。",
-    "display_count": 6
+    "advice_html": "<strong>建议：</strong>制造业从业者可关注高端制造岗位机会。外贸企业需做好关税政策变化的对冲准备，分散市场风险。",
+    "display_count": 4
   },
   {
     "index": 16,
@@ -647,7 +848,9 @@
       {
         "file": "sec017_sent002.mp3",
         "text": "其中中策橡胶等5股解禁市值超22亿元。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec017_sent003.mp3",
         "text": "影响：解禁市值较大可能对相关个股短期走势形成压力，持有相关股票的投资者需留意减持公告。"
@@ -657,8 +860,19 @@
         "text": "整体影响有限，但个股风险不容忽视。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec017_sent005.mp3",
+        "text": "建议：持有解禁股的投资者可关注大股东是否发布减持计划。"
+      },
+      {
+        "file": "sec017_sent006.mp3",
+        "text": "新入市者避免追高解禁压力较大的个股。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>解禁市值较大可能对相关个股短期走势形成压力，持有相关股票的投资者需留意减持公告。整体影响有限，但个股风险不容忽视。",
-    "display_count": 5
+    "advice_html": "<strong>建议：</strong>持有解禁股的投资者可关注大股东是否发布减持计划。新入市者避免追高解禁压力较大的个股。",
+    "display_count": 3
   },
   {
     "index": 17,
@@ -683,7 +897,9 @@
       {
         "file": "sec018_sent003.mp3",
         "text": "段永平看好其生意模式和创始人团队。"
-      },
+      }
+    ],
+    "impact_sentences": [
       {
         "file": "sec018_sent004.mp3",
         "text": "影响：知名投资人举牌提振市场信心，消费赛道关注度提升。"
@@ -693,8 +909,19 @@
         "text": "对普通投资者而言，\"名人效应\"不宜盲目跟风，需理性分析企业基本面和估值水平。"
       }
     ],
+    "advice_sentences": [
+      {
+        "file": "sec018_sent006.mp3",
+        "text": "建议：关注消费赛道投资机会但避免盲目跟风名人操作。"
+      },
+      {
+        "file": "sec018_sent007.mp3",
+        "text": "可研究潮玩产业长期逻辑再做判断。"
+      }
+    ],
     "impact_html": "<strong>影响：</strong>知名投资人举牌提振市场信心，消费赛道关注度提升。对普通投资者而言，\"名人效应\"不宜盲目跟风，需理性分析企业基本面和估值水平。",
-    "display_count": 6
+    "advice_html": "<strong>建议：</strong>关注消费赛道投资机会但避免盲目跟风名人操作。可研究潮玩产业长期逻辑再做判断。",
+    "display_count": 4
   },
   {
     "index": 18,
@@ -711,6 +938,7 @@
       }
     ],
     "impact_html": "",
+    "advice_html": "",
     "display_count": 2
   }
 ]
