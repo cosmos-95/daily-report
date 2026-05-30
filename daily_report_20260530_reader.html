@@ -286,6 +286,9 @@ function render() {
         }
         html += '</div>';
       }
+      if (sec.source_html) {
+        html += '<div class="source-line">' + sec.source_html + '</div>';
+      }
       html += '<div class="card-controls">';
       html += '<button class="card-play-btn" id="playBtn-' + i + '" onclick="playSection(' + i + ')" title="\u6717\u8bfb\u672c\u8282">\u25b6</button>';
       html += '<div class="card-progress" id="prog-' + i + '"><div class="fill" id="progFill-' + i + '"></div></div>';
